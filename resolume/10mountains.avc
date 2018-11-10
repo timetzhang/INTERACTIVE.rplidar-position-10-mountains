@@ -1,0 +1,576 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Composition name="Composition" uniqueId="1499333061498" numDecks="3" currentDeckIndex="0" numLayers="4" numColumns="8" compositionIsRelative="0">
+	<versionInfo name="Resolume Arena" majorVersion="6" minorVersion="0" microVersion="11" revision="61108"/>
+	<CompositionInfo name="10mountains" description="" width="1920" height="1080">
+		<DeckInfo name="Desktop" id="1537589025025" closed="0"/>
+		<DeckInfo name="empty" id="1537589025026" closed="0"/>
+		<DeckInfo name="empty" id="1537589025027" closed="0"/>
+	</CompositionInfo>
+	<Params name="Params">
+		<Param name="Name" default="" value="10mountains"/>
+		<ParamChoice name="Beat Snap" default="5" value="7" storeChoices="0"/>
+		<Param name="KeyboardShortcutPreset" default="" value="Default"/>
+		<Param name="MidiShortcutPreset" default="" value="Default"/>
+		<Param name="OscShortcutPreset" default="" value="OutputAllMessages"/>
+		<Param name="DmxShortcutPreset" default="" value="Default"/>
+	</Params>
+	<CompositionView name="CompositionObjectView">
+		<FoldParams name="FoldParams">
+			<FoldState component="/compositionproperties/dashboard/" folded="0"/>
+		</FoldParams>
+	</CompositionView>
+	<AudioTrack name="AudioTrack">
+		<AudioEffectChain name="AudioEffectChain"/>
+	</AudioTrack>
+	<VideoTrack name="VideoTrack">
+		<Params name="Params">
+			<ParamRange storage="3" name="Width" default="1920" value="1920"/>
+			<ParamRange storage="3" name="Height" default="1080" value="1080"/>
+		</Params>
+		<RenderPass name="RenderPassChain" type="RenderPassChain" uniqueId="RenderPassChain" baseType="RenderPassChain">
+			<RenderPass storage="0" name="Transform" type="TransformEffect" uniqueId="17122039101699797593" baseType="Effect" index="0">
+				<View name="View" bCanBeDisabled="0" bCanBeRemoved="0"/>
+			</RenderPass>
+		</RenderPass>
+		<ChoosableMixer name="Blend"/>
+	</VideoTrack>
+	<Layer uniqueId="1537709491353" layerIndex="0">
+		<Params name="Params">
+			<Param name="Name" default="Layer #" value="Layer Drum"/>
+		</Params>
+		<ClipTransition name="ClipTransition"/>
+		<LayerView name="LayerView">
+			<FoldParams name="FoldParams"/>
+		</LayerView>
+		<AudioTrack name="AudioTrack">
+			<AudioEffectChain name="AudioEffectChain"/>
+		</AudioTrack>
+		<VideoTrack name="VideoTrack">
+			<Params name="Params">
+				<ParamRange name="Opacity" default="0.5" value="1"/>
+				<ParamRange storage="3" name="Width" default="1920" value="1920"/>
+				<ParamRange storage="3" name="Height" default="1080" value="1080"/>
+			</Params>
+			<RenderPass name="RenderPassChain" type="RenderPassChain" uniqueId="RenderPassChain" baseType="RenderPassChain">
+				<RenderPass storage="0" name="Transform" type="TransformEffect" uniqueId="17122039101699797593" baseType="Effect" index="0">
+					<View name="View" bCanBeDisabled="0" bCanBeRemoved="0"/>
+				</RenderPass>
+			</RenderPass>
+			<ChoosableMixer name="Blend">
+				<Params name="Params">
+					<ParamChoice storage="3" name="Blend Mode" default="67464114" value="67464114" storeChoices="0"/>
+				</Params>
+				<RenderPass name="Add" type="Add" uniqueId="A005" baseType="Mixer"/>
+			</ChoosableMixer>
+			<ChoosableMixer name="Transition">
+				<RenderPass name="Alpha" type="Alpha" uniqueId="A006" baseType="Mixer"/>
+			</ChoosableMixer>
+		</VideoTrack>
+	</Layer>
+	<Layer uniqueId="1537589025061" layerIndex="1">
+		<Params name="Params">
+			<Param name="Name" default="Layer #" value="Layer Keyboard"/>
+		</Params>
+		<ClipTransition name="ClipTransition"/>
+		<LayerView name="LayerView">
+			<FoldParams name="FoldParams"/>
+		</LayerView>
+		<AudioTrack name="AudioTrack">
+			<AudioEffectChain name="AudioEffectChain"/>
+		</AudioTrack>
+		<VideoTrack name="VideoTrack">
+			<Params name="Params">
+				<ParamRange name="Opacity" default="0.5" value="1"/>
+				<ParamRange storage="3" name="Width" default="1920" value="1920"/>
+				<ParamRange storage="3" name="Height" default="1080" value="1080"/>
+			</Params>
+			<RenderPass name="RenderPassChain" type="RenderPassChain" uniqueId="RenderPassChain" baseType="RenderPassChain">
+				<RenderPass storage="0" name="Transform" type="TransformEffect" uniqueId="17122039101699797593" baseType="Effect" index="0">
+					<View name="View" bCanBeDisabled="0" bCanBeRemoved="0"/>
+				</RenderPass>
+			</RenderPass>
+			<ChoosableMixer name="Blend">
+				<Params name="Params">
+					<ParamChoice storage="3" name="Blend Mode" default="67464114" value="67464114" storeChoices="0"/>
+				</Params>
+				<RenderPass name="Add" type="Add" uniqueId="A005" baseType="Mixer"/>
+			</ChoosableMixer>
+			<ChoosableMixer name="Transition">
+				<RenderPass name="Alpha" type="Alpha" uniqueId="A006" baseType="Mixer"/>
+			</ChoosableMixer>
+		</VideoTrack>
+	</Layer>
+	<Layer uniqueId="1537589025060" layerIndex="2">
+		<Params name="Params">
+			<Param name="Name" default="Layer #" value="Layer Guitar"/>
+		</Params>
+		<ClipTransition name="ClipTransition"/>
+		<LayerView name="LayerView">
+			<FoldParams name="FoldParams"/>
+		</LayerView>
+		<AudioTrack name="AudioTrack">
+			<AudioEffectChain name="AudioEffectChain"/>
+		</AudioTrack>
+		<VideoTrack name="VideoTrack">
+			<Params name="Params">
+				<ParamRange storage="3" name="Width" default="1920" value="1920"/>
+				<ParamRange storage="3" name="Height" default="1080" value="1080"/>
+			</Params>
+			<RenderPass name="RenderPassChain" type="RenderPassChain" uniqueId="RenderPassChain" baseType="RenderPassChain">
+				<RenderPass storage="0" name="Transform" type="TransformEffect" uniqueId="17122039101699797593" baseType="Effect" index="0">
+					<View name="View" bCanBeDisabled="0" bCanBeRemoved="0"/>
+				</RenderPass>
+			</RenderPass>
+			<ChoosableMixer name="Blend">
+				<Params name="Params">
+					<ParamChoice storage="3" name="Blend Mode" default="67464114" value="67464114" storeChoices="0"/>
+				</Params>
+				<RenderPass name="Add" type="Add" uniqueId="A005" baseType="Mixer"/>
+			</ChoosableMixer>
+			<ChoosableMixer name="Transition">
+				<RenderPass name="Alpha" type="Alpha" uniqueId="A006" baseType="Mixer"/>
+			</ChoosableMixer>
+		</VideoTrack>
+	</Layer>
+	<Layer uniqueId="1537589025062" layerIndex="3">
+		<Params name="Params">
+			<Param name="Name" default="Layer #" value="Layer Bass"/>
+		</Params>
+		<ClipTransition name="ClipTransition"/>
+		<LayerView name="LayerView">
+			<FoldParams name="FoldParams">
+				<FoldState component="/groupedcomponent/common/" folded="1"/>
+				<FoldState component="/groupedcomponent/video/" folded="1"/>
+			</FoldParams>
+		</LayerView>
+		<AudioTrack name="AudioTrack">
+			<AudioEffectChain name="AudioEffectChain"/>
+		</AudioTrack>
+		<VideoTrack name="VideoTrack">
+			<Params name="Params">
+				<ParamRange name="Opacity" default="0.5" value="1"/>
+				<ParamRange storage="3" name="Width" default="1920" value="1920"/>
+				<ParamRange storage="3" name="Height" default="1080" value="1080"/>
+			</Params>
+			<RenderPass name="RenderPassChain" type="RenderPassChain" uniqueId="RenderPassChain" baseType="RenderPassChain">
+				<RenderPass storage="0" name="Transform" type="TransformEffect" uniqueId="17122039101699797593" baseType="Effect" index="0">
+					<View name="View" bCanBeDisabled="0" bCanBeRemoved="0"/>
+				</RenderPass>
+			</RenderPass>
+			<ChoosableMixer name="Blend">
+				<Params name="Params">
+					<ParamChoice storage="3" name="Blend Mode" default="67464114" value="67464319" storeChoices="0"/>
+				</Params>
+				<RenderPass name="Add50" type="Add50" uniqueId="A028" baseType="Mixer"/>
+			</ChoosableMixer>
+			<ChoosableMixer name="Transition">
+				<RenderPass name="Alpha" type="Alpha" uniqueId="A006" baseType="Mixer"/>
+			</ChoosableMixer>
+		</VideoTrack>
+	</Layer>
+	<Column uniqueId="1537589025052" columnIndex="0"/>
+	<Column uniqueId="1537589025053" columnIndex="1"/>
+	<Column uniqueId="1537589025054" columnIndex="2"/>
+	<Column uniqueId="1537589025055" columnIndex="3"/>
+	<Column uniqueId="1537589025056" columnIndex="4"/>
+	<Column uniqueId="1537589025057" columnIndex="5"/>
+	<Column uniqueId="1537589025058" columnIndex="6"/>
+	<Column uniqueId="1537589025059" columnIndex="7"/>
+	<CrossFader name="CrossFader">
+		<AudioTrack name="AudioTrack">
+			<AudioEffectChain name="AudioEffectChain"/>
+		</AudioTrack>
+		<VideoTrack name="VideoTrack">
+			<Params name="Params">
+				<ParamRange storage="3" name="Width" default="1920" value="1920"/>
+				<ParamRange storage="3" name="Height" default="1080" value="1080"/>
+			</Params>
+			<RenderPass name="RenderPassChain" type="RenderPassChain" uniqueId="RenderPassChain" baseType="RenderPassChain">
+				<RenderPass name="Transform" type="TransformEffect" uniqueId="17122039101699797593" baseType="Effect" index="0">
+					<View name="View" bCanBeDisabled="0" bCanBeRemoved="0"/>
+				</RenderPass>
+			</RenderPass>
+			<ChoosableMixer name="Blend">
+				<Params name="Params">
+					<ParamChoice name="Blend Mode" default="0" value="67464115" storeChoices="0"/>
+				</Params>
+				<RenderPass name="Alpha" type="Alpha" uniqueId="A006" baseType="Mixer"/>
+			</ChoosableMixer>
+			<ChoosableMixer name="Blend mode">
+				<Params name="Params">
+					<ParamChoice name="Blend Mode" default="0" value="67464115" storeChoices="0"/>
+				</Params>
+				<RenderPass name="Alpha" type="Alpha" uniqueId="A006" baseType="Mixer"/>
+			</ChoosableMixer>
+		</VideoTrack>
+	</CrossFader>
+	<TempoController name="TempoController">
+		<Params name="Params">
+			<ParamRange name="Tempo" default="120" value="98"/>
+		</Params>
+	</TempoController>
+	<Deck name="Deck" uniqueId="1537589025025" closed="0" numLayers="4" numColumns="8" deckIndex="0">
+		<Params name="Params">
+			<Param name="Name" default="empty" value="Desktop"/>
+		</Params>
+		<Clip name="Clip" uniqueId="1537709491371" layerIndex="0" columnIndex="0">
+			<PreloadData>
+				<AudioFile value="D:\audio\Ableton\Samples\Exotica\29 098 Emin - Apple Loops\29 - Drums 02.aif"/>
+				<VideoFile value="D:\share\paperband-drum.mp4"/>
+			</PreloadData>
+			<Params name="Params">
+				<Param storage="3" name="Name" default="paperband-drum" value="paperband-drum"/>
+				<ParamChoice storage="3" name="TransportType" default="0" value="0" storeChoices="0"/>
+				<ParamChoice name="Clip Trigger Style" default="0" value="2" storeChoices="0"/>
+				<Param name="AutoPilot" default="AAAAAAAAAAA=,AAAAAAAAAAA=" value="BwAAAAAAAAA=,AAAAAAAAAAA="/>
+			</Params>
+			<Transport name="Transport">
+				<Params name="Params">
+					<ParamRange name="Position" default="0" value="9.999999999999950262">
+						<ValueRange name="minMax" min="0" max="9795.0113378684800409"/>
+						<ValueRange name="startStop" min="0" max="9795.0113378684800409"/>
+						<BehaviourDouble name="BehaviourDouble">
+							<PhaseSourceTimeline name="PhaseSourceTimeline" globalSpeedEnabled="1">
+								<Params name="Params">
+									<ParamRange storage="3" name="Beats" default="16" value="16"/>
+									<ParamRange storage="3" name="BPM" default="98.009074914343926821" value="98.009074914343926821"/>
+									<ParamRange storage="3" name="Speed" default="1" value="1"/>
+									<ParamChoice storage="3" name="Syncmode" default="0" value="0" storeChoices="0"/>
+									<ParamChoice storage="3" name="PlayDirection" default="1" value="1" storeChoices="0"/>
+									<ParamChoice storage="3" name="PlayMode" default="0" value="0" storeChoices="0"/>
+									<ParamChoice storage="3" name="PlayModeAway" default="0" value="0" storeChoices="0"/>
+									<Param storage="3" name="Finished" default="0" value="0"/>
+								</Params>
+								<ParamBasedDuration name="ParamBasedDuration"/>
+								<Beats_double name="Beats_double" mode="0" numDetectedBeats="-1" numManualBeats="16" detectedTempo="-1" manualTempo="98.009074914343926821" detected="0"/>
+							</PhaseSourceTimeline>
+						</BehaviourDouble>
+					</ParamRange>
+				</Params>
+			</Transport>
+			<ClipView name="ClipView">
+				<FoldParams name="FoldParams">
+					<FoldState component="/clipproperties/cuepoints/" folded="1"/>
+					<FoldState component="/clipproperties/transport/" folded="0"/>
+					<FoldState component="/groupedcomponent/groupedcomponent/audiotrackinfocomponent/tracksettingscomponent/audiosettingscomponent/" folded="0"/>
+					<FoldState component="/groupedcomponent/renderpasschaincomponent/" folded="0"/>
+					<FoldState component="/groupedcomponent/renderpasschaincomponent/transform/" folded="0"/>
+					<FoldState component="/groupedcomponent/renderpasschaincomponent/transform/anchor/" folded="1"/>
+					<FoldState component="/groupedcomponent/renderpasschaincomponent/transform/rotation/" folded="1"/>
+					<FoldState component="/groupedcomponent/renderpasschaincomponent/transform/scale/" folded="1"/>
+					<FoldState component="/groupedcomponent/videotrackinfocomponent/" folded="1"/>
+					<FoldState component="/groupedcomponent/videotrackinfocomponent/tracksettingscomponent/" folded="1"/>
+					<FoldState component="/groupedcomponent/videotrackinfocomponent/tracksettingscomponent/videomixerparamscomponent/" folded="0"/>
+					<FoldState component="/groupedcomponent/videotrackinfocomponent/tracksettingscomponent/videoparamscomponent/" folded="0"/>
+					<FoldState component="/groupedcomponent/videotrackinfocomponent/tracksettingscomponent/videosettingscomponent/" folded="0"/>
+				</FoldParams>
+			</ClipView>
+			<AudioTrack name="AudioTrack">
+				<AudioEffectChain name="AudioEffectChain"/>
+				<PrimarySource>
+					<AudioFileSource FileName="D:\audio\Ableton\Samples\Exotica\29 098 Emin - Apple Loops\29 - Drums 02.aif"/>
+				</PrimarySource>
+			</AudioTrack>
+			<VideoTrack name="VideoTrack" manualDuration="0">
+				<Params name="Params">
+					<ParamRange storage="3" name="Width" default="1920" value="1920"/>
+					<ParamRange storage="3" name="Height" default="1080" value="1080"/>
+					<Param storage="3" name="RScale" default="1" value="1"/>
+					<Param storage="3" name="GScale" default="1" value="1"/>
+					<Param storage="3" name="BScale" default="1" value="1"/>
+					<Param storage="3" name="AScale" default="0" value="0"/>
+				</Params>
+				<RenderPass name="RenderPassChain" type="RenderPassChain" uniqueId="RenderPassChain" baseType="RenderPassChain">
+					<RenderPass storage="0" name="Transform" type="TransformEffect" uniqueId="17122039101699797593" baseType="Effect" index="0">
+						<View name="View" bCanBeDisabled="0" bCanBeRemoved="0"/>
+					</RenderPass>
+				</RenderPass>
+				<ChoosableMixer name="Blend"/>
+				<PrimarySource>
+					<VideoSource name="VideoSource" width="1920" height="1080" type="VideoFormatReaderSource">
+						<RenderPass name="RenderPassChain" type="RenderPassChain" uniqueId="RenderPassChain" baseType="RenderPassChain"/>
+						<VideoFormatReaderSource fileName="D:\share\paperband-drum.mp4" LoadingThread="TTM_MESSAGE"/>
+					</VideoSource>
+				</PrimarySource>
+			</VideoTrack>
+		</Clip>
+		<Clip name="Clip" uniqueId="1537709491370" layerIndex="1" columnIndex="0">
+			<PreloadData>
+				<AudioFile value="D:\audio\Ableton\Samples\Exotica\29 098 Emin - Apple Loops\29 - Koto 01.aif"/>
+				<VideoFile value="D:\share\paperband-keybroad.mp4"/>
+			</PreloadData>
+			<Params name="Params">
+				<Param storage="3" name="Name" default="paperband-keybroad" value="paperband-keybroad"/>
+				<ParamChoice storage="3" name="TransportType" default="0" value="0" storeChoices="0"/>
+				<ParamChoice name="Clip Trigger Style" default="0" value="2" storeChoices="0"/>
+			</Params>
+			<Transport name="Transport">
+				<Params name="Params">
+					<ParamRange name="Position" default="0" value="139.99999999999809575">
+						<ValueRange name="minMax" min="0" max="9795.0113378684800409"/>
+						<ValueRange name="startStop" min="0" max="9795.0113378684800409"/>
+						<BehaviourDouble name="BehaviourDouble">
+							<PhaseSourceTimeline name="PhaseSourceTimeline" globalSpeedEnabled="1">
+								<Params name="Params">
+									<ParamRange storage="3" name="Beats" default="16" value="16"/>
+									<ParamRange storage="3" name="BPM" default="98.009074914343926821" value="98.009074914343926821"/>
+									<ParamRange storage="3" name="Speed" default="1" value="1"/>
+									<ParamChoice storage="3" name="Syncmode" default="0" value="0" storeChoices="0"/>
+									<ParamChoice storage="3" name="PlayDirection" default="1" value="1" storeChoices="0"/>
+									<ParamChoice storage="3" name="PlayMode" default="0" value="0" storeChoices="0"/>
+									<ParamChoice storage="3" name="PlayModeAway" default="0" value="0" storeChoices="0"/>
+									<Param storage="3" name="Finished" default="0" value="0"/>
+								</Params>
+								<ParamBasedDuration name="ParamBasedDuration"/>
+								<Beats_double name="Beats_double" mode="0" numDetectedBeats="-1" numManualBeats="16" detectedTempo="-1" manualTempo="98.009074914343926821" detected="0"/>
+							</PhaseSourceTimeline>
+						</BehaviourDouble>
+					</ParamRange>
+				</Params>
+			</Transport>
+			<ClipView name="ClipView">
+				<FoldParams name="FoldParams">
+					<FoldState component="/groupedcomponent/renderpasschaincomponent/delayrgb/" folded="0"/>
+					<FoldState component="/groupedcomponent/renderpasschaincomponent/delayrgb/mixerparamscomponent/" folded="0"/>
+					<FoldState component="/groupedcomponent/renderpasschaincomponent/dotscreen/" folded="0"/>
+					<FoldState component="/groupedcomponent/renderpasschaincomponent/dotscreen/mixerparamscomponent/" folded="0"/>
+					<FoldState component="/groupedcomponent/renderpasschaincomponent/invertrgb/" folded="0"/>
+					<FoldState component="/groupedcomponent/renderpasschaincomponent/invertrgb/mixerparamscomponent/" folded="0"/>
+					<FoldState component="/groupedcomponent/renderpasschaincomponent/transform/" folded="1"/>
+					<FoldState component="/groupedcomponent/videotrackinfocomponent/" folded="1"/>
+					<FoldState component="/groupedcomponent/videotrackinfocomponent/tracksettingscomponent/" folded="1"/>
+				</FoldParams>
+			</ClipView>
+			<AudioTrack name="AudioTrack">
+				<AudioEffectChain name="AudioEffectChain"/>
+				<PrimarySource>
+					<AudioFileSource FileName="D:\audio\Ableton\Samples\Exotica\29 098 Emin - Apple Loops\29 - Koto 01.aif"/>
+				</PrimarySource>
+			</AudioTrack>
+			<VideoTrack name="VideoTrack" manualDuration="0">
+				<Params name="Params">
+					<ParamRange storage="3" name="Width" default="1920" value="1920"/>
+					<ParamRange storage="3" name="Height" default="1080" value="1080"/>
+					<Param storage="3" name="RScale" default="1" value="1"/>
+					<Param storage="3" name="GScale" default="1" value="1"/>
+					<Param storage="3" name="BScale" default="1" value="1"/>
+					<Param storage="3" name="AScale" default="0" value="0"/>
+				</Params>
+				<RenderPass name="RenderPassChain" type="RenderPassChain" uniqueId="RenderPassChain" baseType="RenderPassChain">
+					<RenderPass storage="0" name="Transform" type="TransformEffect" uniqueId="17122039101699797593" baseType="Effect" index="0">
+						<View name="View" folded="1" bCanBeDisabled="0" bCanBeRemoved="0"/>
+					</RenderPass>
+					<RenderPass storage="0" name="DelayRGB" type="DryWetEffect" uniqueId="A152" baseType="DryWetEffect" index="1">
+						<RenderPass name="DelayRGB" type="DelayRGB" uniqueId="A152" baseType="Effect" dwType="Effect"/>
+						<ChoosableMixer name="Mixer">
+							<RenderPass name="Alpha" type="Alpha" uniqueId="A006" baseType="Mixer"/>
+						</ChoosableMixer>
+					</RenderPass>
+				</RenderPass>
+				<ChoosableMixer name="Blend"/>
+				<PrimarySource>
+					<VideoSource name="VideoSource" width="1920" height="1080" type="VideoFormatReaderSource">
+						<RenderPass name="RenderPassChain" type="RenderPassChain" uniqueId="RenderPassChain" baseType="RenderPassChain"/>
+						<VideoFormatReaderSource fileName="D:\share\paperband-keybroad.mp4" LoadingThread="TTM_MESSAGE"/>
+					</VideoSource>
+				</PrimarySource>
+			</VideoTrack>
+		</Clip>
+		<Clip name="Clip" uniqueId="1537709491369" layerIndex="2" columnIndex="0">
+			<PreloadData>
+				<AudioFile value="D:\audio\Ableton\Samples\Exotica\29 098 Emin - Apple Loops\29 - Sitar.aif"/>
+				<VideoFile value="D:\share\paperband-guitar.mp4"/>
+			</PreloadData>
+			<Params name="Params">
+				<Param storage="3" name="Name" default="paperband-guitar" value="paperband-guitar"/>
+				<ParamChoice storage="3" name="TransportType" default="0" value="0" storeChoices="0"/>
+				<ParamChoice name="Clip Trigger Style" default="0" value="2" storeChoices="0"/>
+			</Params>
+			<Transport name="Transport">
+				<Params name="Params">
+					<ParamRange name="Position" default="0" value="69.999999999999090505">
+						<ValueRange name="minMax" min="0" max="9795.0113378684800409"/>
+						<ValueRange name="startStop" min="0" max="9795.0113378684800409"/>
+						<BehaviourDouble name="BehaviourDouble">
+							<PhaseSourceTimeline name="PhaseSourceTimeline" globalSpeedEnabled="1">
+								<Params name="Params">
+									<ParamRange storage="3" name="Beats" default="16" value="16"/>
+									<ParamRange storage="3" name="BPM" default="98.009074914343926821" value="98.009074914343926821"/>
+									<ParamRange storage="3" name="Speed" default="1" value="1"/>
+									<ParamChoice storage="3" name="Syncmode" default="0" value="0" storeChoices="0"/>
+									<ParamChoice storage="3" name="PlayDirection" default="1" value="1" storeChoices="0"/>
+									<ParamChoice storage="3" name="PlayMode" default="0" value="0" storeChoices="0"/>
+									<ParamChoice storage="3" name="PlayModeAway" default="0" value="0" storeChoices="0"/>
+									<Param storage="3" name="Finished" default="0" value="0"/>
+								</Params>
+								<ParamBasedDuration name="ParamBasedDuration"/>
+								<Beats_double name="Beats_double" mode="0" numDetectedBeats="-1" numManualBeats="16" detectedTempo="-1" manualTempo="98.009074914343926821" detected="0"/>
+							</PhaseSourceTimeline>
+						</BehaviourDouble>
+					</ParamRange>
+				</Params>
+			</Transport>
+			<ClipView name="ClipView">
+				<FoldParams name="FoldParams">
+					<FoldState component="/groupedcomponent/groupedcomponent/audiotrackinfocomponent/" folded="0"/>
+					<FoldState component="/groupedcomponent/groupedcomponent/audiotrackinfocomponent/tracksettingscomponent/" folded="0"/>
+					<FoldState component="/groupedcomponent/renderpasschaincomponent/edgedetection/" folded="0"/>
+					<FoldState component="/groupedcomponent/renderpasschaincomponent/edgedetection/mixerparamscomponent/" folded="0"/>
+					<FoldState component="/groupedcomponent/renderpasschaincomponent/freeze/" folded="0"/>
+					<FoldState component="/groupedcomponent/renderpasschaincomponent/freeze/mixerparamscomponent/" folded="0"/>
+					<FoldState component="/groupedcomponent/renderpasschaincomponent/goo/" folded="0"/>
+					<FoldState component="/groupedcomponent/renderpasschaincomponent/goo/mixerparamscomponent/" folded="0"/>
+					<FoldState component="/groupedcomponent/renderpasschaincomponent/heat/" folded="0"/>
+					<FoldState component="/groupedcomponent/renderpasschaincomponent/heat/mixerparamscomponent/" folded="0"/>
+					<FoldState component="/groupedcomponent/renderpasschaincomponent/iterate/" folded="0"/>
+					<FoldState component="/groupedcomponent/renderpasschaincomponent/iterate/mixerparamscomponent/" folded="0"/>
+					<FoldState component="/groupedcomponent/renderpasschaincomponent/kaleidoscope/" folded="0"/>
+					<FoldState component="/groupedcomponent/renderpasschaincomponent/kaleidoscope/mixerparamscomponent/" folded="0"/>
+					<FoldState component="/groupedcomponent/renderpasschaincomponent/keystone/" folded="0"/>
+					<FoldState component="/groupedcomponent/renderpasschaincomponent/keystone/mixerparamscomponent/" folded="0"/>
+					<FoldState component="/groupedcomponent/renderpasschaincomponent/noisy/" folded="0"/>
+					<FoldState component="/groupedcomponent/renderpasschaincomponent/noisy/mixerparamscomponent/" folded="0"/>
+					<FoldState component="/groupedcomponent/renderpasschaincomponent/polarkaleido/" folded="0"/>
+					<FoldState component="/groupedcomponent/renderpasschaincomponent/polarkaleido/mixerparamscomponent/" folded="0"/>
+					<FoldState component="/groupedcomponent/renderpasschaincomponent/ripples/" folded="0"/>
+					<FoldState component="/groupedcomponent/renderpasschaincomponent/ripples/mixerparamscomponent/" folded="0"/>
+					<FoldState component="/groupedcomponent/renderpasschaincomponent/shiftglitch/" folded="0"/>
+					<FoldState component="/groupedcomponent/renderpasschaincomponent/shiftglitch/mixerparamscomponent/" folded="0"/>
+					<FoldState component="/groupedcomponent/renderpasschaincomponent/snow/" folded="0"/>
+					<FoldState component="/groupedcomponent/renderpasschaincomponent/snow/mixerparamscomponent/" folded="0"/>
+					<FoldState component="/groupedcomponent/renderpasschaincomponent/stingysphere/" folded="0"/>
+					<FoldState component="/groupedcomponent/renderpasschaincomponent/stingysphere/mixerparamscomponent/" folded="0"/>
+					<FoldState component="/groupedcomponent/renderpasschaincomponent/transform/" folded="1"/>
+					<FoldState component="/groupedcomponent/renderpasschaincomponent/twisted/" folded="0"/>
+					<FoldState component="/groupedcomponent/renderpasschaincomponent/twisted/mixerparamscomponent/" folded="0"/>
+				</FoldParams>
+			</ClipView>
+			<AudioTrack name="AudioTrack">
+				<AudioEffectChain name="AudioEffectChain"/>
+				<PrimarySource>
+					<AudioFileSource FileName="D:\audio\Ableton\Samples\Exotica\29 098 Emin - Apple Loops\29 - Sitar.aif"/>
+				</PrimarySource>
+			</AudioTrack>
+			<VideoTrack name="VideoTrack" manualDuration="0">
+				<Params name="Params">
+					<ParamRange storage="3" name="Width" default="1920" value="1920"/>
+					<ParamRange storage="3" name="Height" default="1080" value="1080"/>
+					<Param storage="3" name="RScale" default="1" value="1"/>
+					<Param storage="3" name="GScale" default="1" value="1"/>
+					<Param storage="3" name="BScale" default="1" value="1"/>
+					<Param storage="3" name="AScale" default="0" value="0"/>
+				</Params>
+				<RenderPass name="RenderPassChain" type="RenderPassChain" uniqueId="RenderPassChain" baseType="RenderPassChain">
+					<RenderPass storage="0" name="Transform" type="TransformEffect" uniqueId="17122039101699797593" baseType="Effect" index="0">
+						<View name="View" folded="1" bCanBeDisabled="0" bCanBeRemoved="0"/>
+					</RenderPass>
+				</RenderPass>
+				<ChoosableMixer name="Blend"/>
+				<PrimarySource>
+					<VideoSource name="VideoSource" width="1920" height="1080" type="VideoFormatReaderSource">
+						<RenderPass name="RenderPassChain" type="RenderPassChain" uniqueId="RenderPassChain" baseType="RenderPassChain"/>
+						<VideoFormatReaderSource fileName="D:\share\paperband-guitar.mp4" LoadingThread="TTM_MESSAGE"/>
+					</VideoSource>
+				</PrimarySource>
+			</VideoTrack>
+		</Clip>
+		<Clip name="Clip" uniqueId="1537709491372" layerIndex="3" columnIndex="0">
+			<PreloadData>
+				<AudioFile value="D:\audio\Ableton\Samples\Exotica\29 098 Emin - Apple Loops\29 - Bass.aif"/>
+				<VideoFile value="D:\share\paperband-bass25.mp4"/>
+			</PreloadData>
+			<Params name="Params">
+				<Param storage="3" name="Name" default="paperband-bass25" value="paperband-bass25"/>
+				<ParamChoice storage="3" name="TransportType" default="0" value="0" storeChoices="0"/>
+				<ParamChoice name="Clip Trigger Style" default="0" value="2" storeChoices="0"/>
+			</Params>
+			<Transport name="Transport">
+				<Params name="Params">
+					<ParamRange name="Position" default="0" value="149.99999999999795364">
+						<ValueRange name="minMax" min="0" max="9795.0113378684800409"/>
+						<ValueRange name="startStop" min="0" max="9795.0113378684800409"/>
+						<BehaviourDouble name="BehaviourDouble">
+							<PhaseSourceTimeline name="PhaseSourceTimeline" globalSpeedEnabled="1">
+								<Params name="Params">
+									<ParamRange storage="3" name="Beats" default="16" value="16"/>
+									<ParamRange storage="3" name="BPM" default="98.009074914343926821" value="98.009074914343926821"/>
+									<ParamRange storage="3" name="Speed" default="1" value="1"/>
+									<ParamChoice storage="3" name="Syncmode" default="0" value="0" storeChoices="0"/>
+									<ParamChoice storage="3" name="PlayDirection" default="1" value="1" storeChoices="0"/>
+									<ParamChoice storage="3" name="PlayMode" default="0" value="0" storeChoices="0"/>
+									<ParamChoice storage="3" name="PlayModeAway" default="0" value="0" storeChoices="0"/>
+									<Param storage="3" name="Finished" default="0" value="0"/>
+								</Params>
+								<ParamBasedDuration name="ParamBasedDuration"/>
+								<Beats_double name="Beats_double" mode="0" numDetectedBeats="-1" numManualBeats="16" detectedTempo="-1" manualTempo="98.009074914343926821" detected="0"/>
+							</PhaseSourceTimeline>
+						</BehaviourDouble>
+					</ParamRange>
+				</Params>
+			</Transport>
+			<ClipView name="ClipView">
+				<FoldParams name="FoldParams">
+					<FoldState component="/clipproperties/beatloopr/" folded="1"/>
+					<FoldState component="/groupedcomponent/groupedcomponent/audiotrackinfocomponent/" folded="0"/>
+					<FoldState component="/groupedcomponent/groupedcomponent/audiotrackinfocomponent/tracksettingscomponent/" folded="0"/>
+					<FoldState component="/groupedcomponent/renderpasschaincomponent/blow/" folded="1"/>
+					<FoldState component="/groupedcomponent/renderpasschaincomponent/blow/mixerparamscomponent/" folded="0"/>
+					<FoldState component="/groupedcomponent/renderpasschaincomponent/dotscreen/" folded="0"/>
+					<FoldState component="/groupedcomponent/renderpasschaincomponent/dotscreen/mixerparamscomponent/" folded="0"/>
+					<FoldState component="/groupedcomponent/renderpasschaincomponent/dropshadow/" folded="0"/>
+					<FoldState component="/groupedcomponent/renderpasschaincomponent/dropshadow/color/paramcolorcomponent/" folded="1"/>
+					<FoldState component="/groupedcomponent/renderpasschaincomponent/dropshadow/mixerparamscomponent/" folded="0"/>
+					<FoldState component="/groupedcomponent/renderpasschaincomponent/edgedetection/0" folded="0"/>
+					<FoldState component="/groupedcomponent/renderpasschaincomponent/edgedetection/0mixerparamscomponent/" folded="0"/>
+					<FoldState component="/groupedcomponent/renderpasschaincomponent/exposure/" folded="0"/>
+					<FoldState component="/groupedcomponent/renderpasschaincomponent/exposure/mixerparamscomponent/" folded="0"/>
+					<FoldState component="/groupedcomponent/renderpasschaincomponent/fisheye/" folded="0"/>
+					<FoldState component="/groupedcomponent/renderpasschaincomponent/fisheye/mixerparamscomponent/" folded="0"/>
+					<FoldState component="/groupedcomponent/renderpasschaincomponent/transform/" folded="1"/>
+				</FoldParams>
+			</ClipView>
+			<AudioTrack name="AudioTrack">
+				<AudioEffectChain name="AudioEffectChain"/>
+				<PrimarySource>
+					<AudioFileSource FileName="D:\audio\Ableton\Samples\Exotica\29 098 Emin - Apple Loops\29 - Bass.aif"/>
+				</PrimarySource>
+			</AudioTrack>
+			<VideoTrack name="VideoTrack" manualDuration="0">
+				<Params name="Params">
+					<ParamRange storage="3" name="Width" default="1920" value="1920"/>
+					<ParamRange storage="3" name="Height" default="1080" value="1080"/>
+					<Param storage="3" name="RScale" default="1" value="1"/>
+					<Param storage="3" name="GScale" default="1" value="1"/>
+					<Param storage="3" name="BScale" default="1" value="1"/>
+					<Param storage="3" name="AScale" default="0" value="0"/>
+				</Params>
+				<RenderPass name="RenderPassChain" type="RenderPassChain" uniqueId="RenderPassChain" baseType="RenderPassChain">
+					<RenderPass storage="0" name="Transform" type="TransformEffect" uniqueId="17122039101699797593" baseType="Effect" index="0">
+						<View name="View" folded="1" bCanBeDisabled="0" bCanBeRemoved="0"/>
+					</RenderPass>
+					<RenderPass storage="0" name="Edge Detection" type="DryWetEffect" uniqueId="MEDG" baseType="DryWetEffect" index="1">
+						<RenderPass name="Edge Detection" type="FFGLEffect" uniqueId="MEDG" baseType="Effect" dwType="Effect">
+							<Params name="Params">
+								<ParamRange name="Multiplier" default="0.20000000298023223877" value="0.25239616613418530688"/>
+							</Params>
+							<FFGLPlugin name="FFGLPlugin" uniqueId="MEDG" fileName="C:\Program Files\Resolume Arena 6\plugins\vfx\FFGLEdgeDetection.dll"/>
+						</RenderPass>
+						<ChoosableMixer name="Mixer">
+							<RenderPass name="Alpha" type="Alpha" uniqueId="A006" baseType="Mixer"/>
+						</ChoosableMixer>
+					</RenderPass>
+				</RenderPass>
+				<ChoosableMixer name="Blend"/>
+				<PrimarySource>
+					<VideoSource name="VideoSource" width="1920" height="1080" type="VideoFormatReaderSource">
+						<RenderPass name="RenderPassChain" type="RenderPassChain" uniqueId="RenderPassChain" baseType="RenderPassChain"/>
+						<VideoFormatReaderSource fileName="D:\share\paperband-bass25.mp4" LoadingThread="TTM_MESSAGE"/>
+					</VideoSource>
+				</PrimarySource>
+			</VideoTrack>
+		</Clip>
+	</Deck>
+	<Deck name="Deck" uniqueId="1537589025026" numLayers="4" numColumns="8" closed="0" deckIndex="1"/>
+	<Deck name="Deck" uniqueId="1537589025027" numLayers="0" numColumns="0" closed="0" deckIndex="2"/>
+</Composition>
+
