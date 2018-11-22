@@ -6,16 +6,16 @@
 
 RPLidar lidar;
 
-uint8_t keys[9] = {'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l'};
+uint8_t keys[10] = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j'};
 long lastKeyTime;
 
 //确定x为负还是正
 int operation;
 
 //探测画幅, 单位为 0.1mm, 1000为1米
-int left_width = 2000;
-int right_width = 2000;
-int height = 2000;
+int left_width = 2800;
+int right_width = 2800;
+int height = 2400;
 
 void setup() {
   Serial.begin(115200);
@@ -39,7 +39,7 @@ void loop() {
       byte  quality  = lidar.getCurrentPoint().quality; //quality of the current measurement
 
       //如果检测到距离，开始工作
-      if (distance > 0) { 
+      if (distance > 0) {
         // 左边扇形与右边扇形度数处理
         if (angle >= 270) {
           angle = 360 - angle;
@@ -58,8 +58,43 @@ void loop() {
           Serial.print(x);
           Serial.print(",");
           Serial.println(y);
-          Keyboard.write(keys[int(map(x, -left_width, right_width, 0, sizeof(keys)))]);
-          delay(50);
+
+          //X-Y位置对应的keys
+          //Mountain 3
+          if (x < -1584 && x > -1837 && y > 1216 && y < 1400) {
+            Keyboard.write(keys[2]);
+            delay(150);
+          }
+          //Mountain 4
+          if (x < -863 && x > -1164 && y > 1363 && y < 1489) {
+            Keyboard.write(keys[3]);
+            delay(150);
+          }
+          //Mountain 5
+          if (x < -315 && x > -638 && y > 1230 && y < 1680) {
+            Keyboard.write(keys[4]);
+            delay(150);
+          }
+          //Mountain 6
+          if (x > 43 && x < 311 && y > 1358 && y < 1590) {
+            Keyboard.write(keys[5]);
+            delay(150);
+          }
+          //Mountain 7
+          if (x > 759 && x < 1069 && y > 1228 && y < 1448) {
+            Keyboard.write(keys[6]);
+            delay(150);
+          }
+          //Mountain 8
+          if (x > 1978 && x < 1873 && y > 2112 && y < 1558) {
+            Keyboard.write(keys[7]);
+            delay(150);
+          }
+          //Mountain 9
+          if (x > 2255 && x < 2509 && y > 1406 && y < 1489) {
+            Keyboard.write(keys[8]);
+            delay(150);
+          }
         }
       }
     } else {

@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Composition name="Composition" uniqueId="1499333061498" numDecks="3" currentDeckIndex="0" numLayers="4" numColumns="8" compositionIsRelative="0">
+<Composition name="Composition" uniqueId="1499333061498" numDecks="3" currentDeckIndex="0" numLayers="22" numColumns="8" compositionIsRelative="0">
 	<versionInfo name="Resolume Arena" majorVersion="6" minorVersion="0" microVersion="11" revision="61108"/>
 	<CompositionInfo name="10mountains" description="" width="1920" height="1080">
-		<DeckInfo name="Desktop" id="1537589025025" closed="0"/>
-		<DeckInfo name="empty" id="1537589025026" closed="0"/>
-		<DeckInfo name="empty" id="1537589025027" closed="0"/>
+		<DeckInfo name="AV" id="1541836880688" closed="0"/>
+		<DeckInfo name="empty" id="1541836880689" closed="0"/>
+		<DeckInfo name="empty" id="1541836880690" closed="0"/>
 	</CompositionInfo>
 	<Params name="Params">
 		<Param name="Name" default="" value="10mountains"/>
-		<ParamChoice name="Beat Snap" default="5" value="7" storeChoices="0"/>
+		<ParamRange name="Speed" default="1" value="0.58979591836734690524"/>
 		<Param name="KeyboardShortcutPreset" default="" value="Default"/>
 		<Param name="MidiShortcutPreset" default="" value="Default"/>
 		<Param name="OscShortcutPreset" default="" value="OutputAllMessages"/>
@@ -34,9 +34,9 @@
 		</RenderPass>
 		<ChoosableMixer name="Blend"/>
 	</VideoTrack>
-	<Layer uniqueId="1537709491353" layerIndex="0">
+	<Layer uniqueId="1541836880895" layerIndex="0">
 		<Params name="Params">
-			<Param name="Name" default="Layer #" value="Layer Drum"/>
+			<Param name="Name" default="Layer #" value="Layer BG"/>
 		</Params>
 		<ClipTransition name="ClipTransition"/>
 		<LayerView name="LayerView">
@@ -67,9 +67,41 @@
 			</ChoosableMixer>
 		</VideoTrack>
 	</Layer>
-	<Layer uniqueId="1537589025061" layerIndex="1">
+	<Layer uniqueId="1541836880723" layerIndex="1">
 		<Params name="Params">
-			<Param name="Name" default="Layer #" value="Layer Keyboard"/>
+			<Param name="Name" default="Layer #" value="Layer 1V"/>
+		</Params>
+		<ClipTransition name="ClipTransition"/>
+		<LayerView name="LayerView">
+			<FoldParams name="FoldParams"/>
+		</LayerView>
+		<AudioTrack name="AudioTrack">
+			<AudioEffectChain name="AudioEffectChain"/>
+		</AudioTrack>
+		<VideoTrack name="VideoTrack">
+			<Params name="Params">
+				<ParamRange storage="3" name="Width" default="1920" value="1920"/>
+				<ParamRange storage="3" name="Height" default="1080" value="1080"/>
+			</Params>
+			<RenderPass name="RenderPassChain" type="RenderPassChain" uniqueId="RenderPassChain" baseType="RenderPassChain">
+				<RenderPass storage="0" name="Transform" type="TransformEffect" uniqueId="17122039101699797593" baseType="Effect" index="0">
+					<View name="View" bCanBeDisabled="0" bCanBeRemoved="0"/>
+				</RenderPass>
+			</RenderPass>
+			<ChoosableMixer name="Blend">
+				<Params name="Params">
+					<ParamChoice storage="3" name="Blend Mode" default="67464114" value="67464114" storeChoices="0"/>
+				</Params>
+				<RenderPass name="Add" type="Add" uniqueId="A005" baseType="Mixer"/>
+			</ChoosableMixer>
+			<ChoosableMixer name="Transition">
+				<RenderPass name="Alpha" type="Alpha" uniqueId="A006" baseType="Mixer"/>
+			</ChoosableMixer>
+		</VideoTrack>
+	</Layer>
+	<Layer uniqueId="1541836880919" layerIndex="2">
+		<Params name="Params">
+			<Param name="Name" default="Layer #" value="Layer 1A"/>
 		</Params>
 		<ClipTransition name="ClipTransition"/>
 		<LayerView name="LayerView">
@@ -100,9 +132,9 @@
 			</ChoosableMixer>
 		</VideoTrack>
 	</Layer>
-	<Layer uniqueId="1537589025060" layerIndex="2">
+	<Layer uniqueId="1541836880944" layerIndex="3">
 		<Params name="Params">
-			<Param name="Name" default="Layer #" value="Layer Guitar"/>
+			<Param name="Name" default="Layer #" value="Layer 2V"/>
 		</Params>
 		<ClipTransition name="ClipTransition"/>
 		<LayerView name="LayerView">
@@ -113,6 +145,7 @@
 		</AudioTrack>
 		<VideoTrack name="VideoTrack">
 			<Params name="Params">
+				<ParamRange name="Opacity" default="0.5" value="1"/>
 				<ParamRange storage="3" name="Width" default="1920" value="1920"/>
 				<ParamRange storage="3" name="Height" default="1080" value="1080"/>
 			</Params>
@@ -132,16 +165,49 @@
 			</ChoosableMixer>
 		</VideoTrack>
 	</Layer>
-	<Layer uniqueId="1537589025062" layerIndex="3">
+	<Layer uniqueId="1541836880975" layerIndex="4">
 		<Params name="Params">
-			<Param name="Name" default="Layer #" value="Layer Bass"/>
+			<Param name="Name" default="Layer #" value="Layer2A"/>
 		</Params>
 		<ClipTransition name="ClipTransition"/>
 		<LayerView name="LayerView">
-			<FoldParams name="FoldParams">
-				<FoldState component="/groupedcomponent/common/" folded="1"/>
-				<FoldState component="/groupedcomponent/video/" folded="1"/>
-			</FoldParams>
+			<FoldParams name="FoldParams"/>
+		</LayerView>
+		<AudioTrack name="AudioTrack">
+			<Params name="Params">
+				<ParamRange name="Volume" default="0" value="-1.6875000670552253723"/>
+			</Params>
+			<AudioEffectChain name="AudioEffectChain"/>
+		</AudioTrack>
+		<VideoTrack name="VideoTrack">
+			<Params name="Params">
+				<ParamRange name="Opacity" default="0.5" value="1"/>
+				<ParamRange storage="3" name="Width" default="1920" value="1920"/>
+				<ParamRange storage="3" name="Height" default="1080" value="1080"/>
+			</Params>
+			<RenderPass name="RenderPassChain" type="RenderPassChain" uniqueId="RenderPassChain" baseType="RenderPassChain">
+				<RenderPass storage="0" name="Transform" type="TransformEffect" uniqueId="17122039101699797593" baseType="Effect" index="0">
+					<View name="View" bCanBeDisabled="0" bCanBeRemoved="0"/>
+				</RenderPass>
+			</RenderPass>
+			<ChoosableMixer name="Blend">
+				<Params name="Params">
+					<ParamChoice storage="3" name="Blend Mode" default="67464114" value="67464114" storeChoices="0"/>
+				</Params>
+				<RenderPass name="Add" type="Add" uniqueId="A005" baseType="Mixer"/>
+			</ChoosableMixer>
+			<ChoosableMixer name="Transition">
+				<RenderPass name="Alpha" type="Alpha" uniqueId="A006" baseType="Mixer"/>
+			</ChoosableMixer>
+		</VideoTrack>
+	</Layer>
+	<Layer uniqueId="1541836880725" layerIndex="5">
+		<Params name="Params">
+			<Param name="Name" default="Layer #" value="Layer 3V"/>
+		</Params>
+		<ClipTransition name="ClipTransition"/>
+		<LayerView name="LayerView">
+			<FoldParams name="FoldParams"/>
 		</LayerView>
 		<AudioTrack name="AudioTrack">
 			<AudioEffectChain name="AudioEffectChain"/>
@@ -159,23 +225,555 @@
 			</RenderPass>
 			<ChoosableMixer name="Blend">
 				<Params name="Params">
-					<ParamChoice storage="3" name="Blend Mode" default="67464114" value="67464319" storeChoices="0"/>
+					<ParamChoice storage="3" name="Blend Mode" default="67464114" value="67464114" storeChoices="0"/>
 				</Params>
-				<RenderPass name="Add50" type="Add50" uniqueId="A028" baseType="Mixer"/>
+				<RenderPass name="Add" type="Add" uniqueId="A005" baseType="Mixer"/>
 			</ChoosableMixer>
 			<ChoosableMixer name="Transition">
 				<RenderPass name="Alpha" type="Alpha" uniqueId="A006" baseType="Mixer"/>
 			</ChoosableMixer>
 		</VideoTrack>
 	</Layer>
-	<Column uniqueId="1537589025052" columnIndex="0"/>
-	<Column uniqueId="1537589025053" columnIndex="1"/>
-	<Column uniqueId="1537589025054" columnIndex="2"/>
-	<Column uniqueId="1537589025055" columnIndex="3"/>
-	<Column uniqueId="1537589025056" columnIndex="4"/>
-	<Column uniqueId="1537589025057" columnIndex="5"/>
-	<Column uniqueId="1537589025058" columnIndex="6"/>
-	<Column uniqueId="1537589025059" columnIndex="7"/>
+	<Layer uniqueId="1541836880910" layerIndex="6">
+		<Params name="Params">
+			<Param name="Name" default="Layer #" value="Layer 3A"/>
+		</Params>
+		<ClipTransition name="ClipTransition"/>
+		<LayerView name="LayerView">
+			<FoldParams name="FoldParams"/>
+		</LayerView>
+		<AudioTrack name="AudioTrack">
+			<AudioEffectChain name="AudioEffectChain"/>
+		</AudioTrack>
+		<VideoTrack name="VideoTrack">
+			<Params name="Params">
+				<ParamRange name="Opacity" default="0.5" value="0"/>
+				<ParamRange storage="3" name="Width" default="1920" value="1920"/>
+				<ParamRange storage="3" name="Height" default="1080" value="1080"/>
+			</Params>
+			<RenderPass name="RenderPassChain" type="RenderPassChain" uniqueId="RenderPassChain" baseType="RenderPassChain">
+				<RenderPass storage="0" name="Transform" type="TransformEffect" uniqueId="17122039101699797593" baseType="Effect" index="0">
+					<View name="View" bCanBeDisabled="0" bCanBeRemoved="0"/>
+				</RenderPass>
+			</RenderPass>
+			<ChoosableMixer name="Blend">
+				<Params name="Params">
+					<ParamChoice storage="3" name="Blend Mode" default="67464114" value="67464114" storeChoices="0"/>
+				</Params>
+				<RenderPass name="Add" type="Add" uniqueId="A005" baseType="Mixer"/>
+			</ChoosableMixer>
+			<ChoosableMixer name="Transition">
+				<RenderPass name="Alpha" type="Alpha" uniqueId="A006" baseType="Mixer"/>
+			</ChoosableMixer>
+		</VideoTrack>
+	</Layer>
+	<Layer uniqueId="1541836880823" layerIndex="7">
+		<Params name="Params">
+			<Param name="Name" default="Layer #" value="Layer 4V"/>
+		</Params>
+		<ClipTransition name="ClipTransition"/>
+		<LayerView name="LayerView">
+			<FoldParams name="FoldParams"/>
+		</LayerView>
+		<AudioTrack name="AudioTrack">
+			<AudioEffectChain name="AudioEffectChain"/>
+		</AudioTrack>
+		<VideoTrack name="VideoTrack">
+			<Params name="Params">
+				<ParamRange name="Opacity" default="0.5" value="1"/>
+				<ParamRange storage="3" name="Width" default="1920" value="1920"/>
+				<ParamRange storage="3" name="Height" default="1080" value="1080"/>
+			</Params>
+			<RenderPass name="RenderPassChain" type="RenderPassChain" uniqueId="RenderPassChain" baseType="RenderPassChain">
+				<RenderPass storage="0" name="Transform" type="TransformEffect" uniqueId="17122039101699797593" baseType="Effect" index="0">
+					<View name="View" bCanBeDisabled="0" bCanBeRemoved="0"/>
+				</RenderPass>
+			</RenderPass>
+			<ChoosableMixer name="Blend">
+				<Params name="Params">
+					<ParamChoice storage="3" name="Blend Mode" default="67464114" value="67464114" storeChoices="0"/>
+				</Params>
+				<RenderPass name="Add" type="Add" uniqueId="A005" baseType="Mixer"/>
+			</ChoosableMixer>
+			<ChoosableMixer name="Transition">
+				<RenderPass name="Alpha" type="Alpha" uniqueId="A006" baseType="Mixer"/>
+			</ChoosableMixer>
+		</VideoTrack>
+	</Layer>
+	<Layer uniqueId="1541836881085" layerIndex="8">
+		<Params name="Params">
+			<Param name="Name" default="Layer #" value="Layer 4A"/>
+		</Params>
+		<ClipTransition name="ClipTransition"/>
+		<LayerView name="LayerView">
+			<FoldParams name="FoldParams"/>
+		</LayerView>
+		<AudioTrack name="AudioTrack">
+			<AudioEffectChain name="AudioEffectChain"/>
+		</AudioTrack>
+		<VideoTrack name="VideoTrack">
+			<Params name="Params">
+				<ParamRange name="Opacity" default="0.5" value="1"/>
+				<ParamRange storage="3" name="Width" default="1920" value="1920"/>
+				<ParamRange storage="3" name="Height" default="1080" value="1080"/>
+			</Params>
+			<RenderPass name="RenderPassChain" type="RenderPassChain" uniqueId="RenderPassChain" baseType="RenderPassChain">
+				<RenderPass storage="0" name="Transform" type="TransformEffect" uniqueId="17122039101699797593" baseType="Effect" index="0">
+					<View name="View" bCanBeDisabled="0" bCanBeRemoved="0"/>
+				</RenderPass>
+			</RenderPass>
+			<ChoosableMixer name="Blend">
+				<Params name="Params">
+					<ParamChoice storage="3" name="Blend Mode" default="67464114" value="67464114" storeChoices="0"/>
+				</Params>
+				<RenderPass name="Add" type="Add" uniqueId="A005" baseType="Mixer"/>
+			</ChoosableMixer>
+			<ChoosableMixer name="Transition">
+				<RenderPass name="Alpha" type="Alpha" uniqueId="A006" baseType="Mixer"/>
+			</ChoosableMixer>
+		</VideoTrack>
+	</Layer>
+	<Layer uniqueId="1541836880832" layerIndex="9">
+		<Params name="Params">
+			<Param name="Name" default="Layer #" value="Layer 5V"/>
+		</Params>
+		<ClipTransition name="ClipTransition"/>
+		<LayerView name="LayerView">
+			<FoldParams name="FoldParams"/>
+		</LayerView>
+		<AudioTrack name="AudioTrack">
+			<AudioEffectChain name="AudioEffectChain"/>
+		</AudioTrack>
+		<VideoTrack name="VideoTrack">
+			<Params name="Params">
+				<ParamRange name="Opacity" default="0.5" value="0"/>
+				<ParamRange storage="3" name="Width" default="1920" value="1920"/>
+				<ParamRange storage="3" name="Height" default="1080" value="1080"/>
+			</Params>
+			<RenderPass name="RenderPassChain" type="RenderPassChain" uniqueId="RenderPassChain" baseType="RenderPassChain">
+				<RenderPass storage="0" name="Transform" type="TransformEffect" uniqueId="17122039101699797593" baseType="Effect" index="0">
+					<View name="View" bCanBeDisabled="0" bCanBeRemoved="0"/>
+				</RenderPass>
+			</RenderPass>
+			<ChoosableMixer name="Blend">
+				<Params name="Params">
+					<ParamChoice storage="3" name="Blend Mode" default="67464114" value="67464114" storeChoices="0"/>
+				</Params>
+				<RenderPass name="Add" type="Add" uniqueId="A005" baseType="Mixer"/>
+			</ChoosableMixer>
+			<ChoosableMixer name="Transition">
+				<RenderPass name="Alpha" type="Alpha" uniqueId="A006" baseType="Mixer"/>
+			</ChoosableMixer>
+		</VideoTrack>
+	</Layer>
+	<Layer uniqueId="1541836881094" layerIndex="10">
+		<Params name="Params">
+			<Param name="Name" default="Layer #" value="Layer 5A"/>
+		</Params>
+		<ClipTransition name="ClipTransition"/>
+		<LayerView name="LayerView">
+			<FoldParams name="FoldParams"/>
+		</LayerView>
+		<AudioTrack name="AudioTrack">
+			<AudioEffectChain name="AudioEffectChain"/>
+		</AudioTrack>
+		<VideoTrack name="VideoTrack">
+			<Params name="Params">
+				<ParamRange name="Opacity" default="0.5" value="1"/>
+				<ParamRange storage="3" name="Width" default="1920" value="1920"/>
+				<ParamRange storage="3" name="Height" default="1080" value="1080"/>
+			</Params>
+			<RenderPass name="RenderPassChain" type="RenderPassChain" uniqueId="RenderPassChain" baseType="RenderPassChain">
+				<RenderPass storage="0" name="Transform" type="TransformEffect" uniqueId="17122039101699797593" baseType="Effect" index="0">
+					<View name="View" bCanBeDisabled="0" bCanBeRemoved="0"/>
+				</RenderPass>
+			</RenderPass>
+			<ChoosableMixer name="Blend">
+				<Params name="Params">
+					<ParamChoice storage="3" name="Blend Mode" default="67464114" value="67464114" storeChoices="0"/>
+				</Params>
+				<RenderPass name="Add" type="Add" uniqueId="A005" baseType="Mixer"/>
+			</ChoosableMixer>
+			<ChoosableMixer name="Transition">
+				<RenderPass name="Alpha" type="Alpha" uniqueId="A006" baseType="Mixer"/>
+			</ChoosableMixer>
+		</VideoTrack>
+	</Layer>
+	<Layer uniqueId="1541836880841" layerIndex="11">
+		<Params name="Params">
+			<Param name="Name" default="Layer #" value="Layer 6V"/>
+		</Params>
+		<ClipTransition name="ClipTransition"/>
+		<LayerView name="LayerView">
+			<FoldParams name="FoldParams"/>
+		</LayerView>
+		<AudioTrack name="AudioTrack">
+			<AudioEffectChain name="AudioEffectChain"/>
+		</AudioTrack>
+		<VideoTrack name="VideoTrack">
+			<Params name="Params">
+				<ParamRange name="Opacity" default="0.5" value="0"/>
+				<ParamRange storage="3" name="Width" default="1920" value="1920"/>
+				<ParamRange storage="3" name="Height" default="1080" value="1080"/>
+			</Params>
+			<RenderPass name="RenderPassChain" type="RenderPassChain" uniqueId="RenderPassChain" baseType="RenderPassChain">
+				<RenderPass storage="0" name="Transform" type="TransformEffect" uniqueId="17122039101699797593" baseType="Effect" index="0">
+					<Params name="Params">
+						<ParamRange name="Scale" default="100" value="102.16718266253869274"/>
+					</Params>
+					<View name="View" bCanBeDisabled="0" bCanBeRemoved="0"/>
+				</RenderPass>
+			</RenderPass>
+			<ChoosableMixer name="Blend">
+				<Params name="Params">
+					<ParamChoice storage="3" name="Blend Mode" default="67464114" value="67464114" storeChoices="0"/>
+				</Params>
+				<RenderPass name="Add" type="Add" uniqueId="A005" baseType="Mixer"/>
+			</ChoosableMixer>
+			<ChoosableMixer name="Transition">
+				<RenderPass name="Alpha" type="Alpha" uniqueId="A006" baseType="Mixer"/>
+			</ChoosableMixer>
+		</VideoTrack>
+	</Layer>
+	<Layer uniqueId="1541836881103" layerIndex="12">
+		<Params name="Params">
+			<Param name="Name" default="Layer #" value="Layer 6A"/>
+		</Params>
+		<ClipTransition name="ClipTransition"/>
+		<LayerView name="LayerView">
+			<FoldParams name="FoldParams"/>
+		</LayerView>
+		<AudioTrack name="AudioTrack">
+			<AudioEffectChain name="AudioEffectChain"/>
+		</AudioTrack>
+		<VideoTrack name="VideoTrack">
+			<Params name="Params">
+				<ParamRange name="Opacity" default="0.5" value="1"/>
+				<ParamRange storage="3" name="Width" default="1920" value="1920"/>
+				<ParamRange storage="3" name="Height" default="1080" value="1080"/>
+			</Params>
+			<RenderPass name="RenderPassChain" type="RenderPassChain" uniqueId="RenderPassChain" baseType="RenderPassChain">
+				<RenderPass storage="0" name="Transform" type="TransformEffect" uniqueId="17122039101699797593" baseType="Effect" index="0">
+					<View name="View" bCanBeDisabled="0" bCanBeRemoved="0"/>
+				</RenderPass>
+			</RenderPass>
+			<ChoosableMixer name="Blend">
+				<Params name="Params">
+					<ParamChoice storage="3" name="Blend Mode" default="67464114" value="67464114" storeChoices="0"/>
+				</Params>
+				<RenderPass name="Add" type="Add" uniqueId="A005" baseType="Mixer"/>
+			</ChoosableMixer>
+			<ChoosableMixer name="Transition">
+				<RenderPass name="Alpha" type="Alpha" uniqueId="A006" baseType="Mixer"/>
+			</ChoosableMixer>
+		</VideoTrack>
+	</Layer>
+	<Layer uniqueId="1541836880850" layerIndex="13">
+		<Params name="Params">
+			<Param name="Name" default="Layer #" value="Layer 7V"/>
+		</Params>
+		<ClipTransition name="ClipTransition"/>
+		<LayerView name="LayerView">
+			<FoldParams name="FoldParams"/>
+		</LayerView>
+		<AudioTrack name="AudioTrack">
+			<AudioEffectChain name="AudioEffectChain"/>
+		</AudioTrack>
+		<VideoTrack name="VideoTrack">
+			<Params name="Params">
+				<ParamRange name="Opacity" default="0.5" value="1"/>
+				<ParamRange storage="3" name="Width" default="1920" value="1920"/>
+				<ParamRange storage="3" name="Height" default="1080" value="1080"/>
+			</Params>
+			<RenderPass name="RenderPassChain" type="RenderPassChain" uniqueId="RenderPassChain" baseType="RenderPassChain">
+				<RenderPass storage="0" name="Transform" type="TransformEffect" uniqueId="17122039101699797593" baseType="Effect" index="0">
+					<View name="View" bCanBeDisabled="0" bCanBeRemoved="0"/>
+				</RenderPass>
+			</RenderPass>
+			<ChoosableMixer name="Blend">
+				<Params name="Params">
+					<ParamChoice storage="3" name="Blend Mode" default="67464114" value="67464114" storeChoices="0"/>
+				</Params>
+				<RenderPass name="Add" type="Add" uniqueId="A005" baseType="Mixer"/>
+			</ChoosableMixer>
+			<ChoosableMixer name="Transition">
+				<RenderPass name="Alpha" type="Alpha" uniqueId="A006" baseType="Mixer"/>
+			</ChoosableMixer>
+		</VideoTrack>
+	</Layer>
+	<Layer uniqueId="1541836881112" layerIndex="14">
+		<Params name="Params">
+			<Param name="Name" default="Layer #" value="Layer 7A"/>
+		</Params>
+		<ClipTransition name="ClipTransition"/>
+		<LayerView name="LayerView">
+			<FoldParams name="FoldParams"/>
+		</LayerView>
+		<AudioTrack name="AudioTrack">
+			<AudioEffectChain name="AudioEffectChain"/>
+		</AudioTrack>
+		<VideoTrack name="VideoTrack">
+			<Params name="Params">
+				<ParamRange name="Opacity" default="0.5" value="1"/>
+				<ParamRange storage="3" name="Width" default="1920" value="1920"/>
+				<ParamRange storage="3" name="Height" default="1080" value="1080"/>
+			</Params>
+			<RenderPass name="RenderPassChain" type="RenderPassChain" uniqueId="RenderPassChain" baseType="RenderPassChain">
+				<RenderPass storage="0" name="Transform" type="TransformEffect" uniqueId="17122039101699797593" baseType="Effect" index="0">
+					<View name="View" bCanBeDisabled="0" bCanBeRemoved="0"/>
+				</RenderPass>
+			</RenderPass>
+			<ChoosableMixer name="Blend">
+				<Params name="Params">
+					<ParamChoice storage="3" name="Blend Mode" default="67464114" value="67464114" storeChoices="0"/>
+				</Params>
+				<RenderPass name="Add" type="Add" uniqueId="A005" baseType="Mixer"/>
+			</ChoosableMixer>
+			<ChoosableMixer name="Transition">
+				<RenderPass name="Alpha" type="Alpha" uniqueId="A006" baseType="Mixer"/>
+			</ChoosableMixer>
+		</VideoTrack>
+	</Layer>
+	<Layer uniqueId="1541836880859" layerIndex="15">
+		<Params name="Params">
+			<Param name="Name" default="Layer #" value="Layer 8V"/>
+		</Params>
+		<ClipTransition name="ClipTransition"/>
+		<LayerView name="LayerView">
+			<FoldParams name="FoldParams"/>
+		</LayerView>
+		<AudioTrack name="AudioTrack">
+			<Params name="Params">
+				<ParamRange name="Volume" default="0" value="-16.875000670552253723"/>
+			</Params>
+			<AudioEffectChain name="AudioEffectChain"/>
+		</AudioTrack>
+		<VideoTrack name="VideoTrack">
+			<Params name="Params">
+				<ParamRange name="Opacity" default="0.5" value="1"/>
+				<ParamRange storage="3" name="Width" default="1920" value="1920"/>
+				<ParamRange storage="3" name="Height" default="1080" value="1080"/>
+			</Params>
+			<RenderPass name="RenderPassChain" type="RenderPassChain" uniqueId="RenderPassChain" baseType="RenderPassChain">
+				<RenderPass storage="0" name="Transform" type="TransformEffect" uniqueId="17122039101699797593" baseType="Effect" index="0">
+					<View name="View" bCanBeDisabled="0" bCanBeRemoved="0"/>
+				</RenderPass>
+			</RenderPass>
+			<ChoosableMixer name="Blend">
+				<Params name="Params">
+					<ParamChoice storage="3" name="Blend Mode" default="67464114" value="67464114" storeChoices="0"/>
+				</Params>
+				<RenderPass name="Add" type="Add" uniqueId="A005" baseType="Mixer"/>
+			</ChoosableMixer>
+			<ChoosableMixer name="Transition">
+				<RenderPass name="Alpha" type="Alpha" uniqueId="A006" baseType="Mixer"/>
+			</ChoosableMixer>
+		</VideoTrack>
+	</Layer>
+	<Layer uniqueId="1541836881121" layerIndex="16">
+		<Params name="Params">
+			<Param name="Name" default="Layer #" value="Layer 8A"/>
+		</Params>
+		<ClipTransition name="ClipTransition"/>
+		<LayerView name="LayerView">
+			<FoldParams name="FoldParams"/>
+		</LayerView>
+		<AudioTrack name="AudioTrack">
+			<AudioEffectChain name="AudioEffectChain"/>
+		</AudioTrack>
+		<VideoTrack name="VideoTrack">
+			<Params name="Params">
+				<ParamRange name="Opacity" default="0.5" value="1"/>
+				<ParamRange storage="3" name="Width" default="1920" value="1920"/>
+				<ParamRange storage="3" name="Height" default="1080" value="1080"/>
+			</Params>
+			<RenderPass name="RenderPassChain" type="RenderPassChain" uniqueId="RenderPassChain" baseType="RenderPassChain">
+				<RenderPass storage="0" name="Transform" type="TransformEffect" uniqueId="17122039101699797593" baseType="Effect" index="0">
+					<View name="View" bCanBeDisabled="0" bCanBeRemoved="0"/>
+				</RenderPass>
+			</RenderPass>
+			<ChoosableMixer name="Blend">
+				<Params name="Params">
+					<ParamChoice storage="3" name="Blend Mode" default="67464114" value="67464114" storeChoices="0"/>
+				</Params>
+				<RenderPass name="Add" type="Add" uniqueId="A005" baseType="Mixer"/>
+			</ChoosableMixer>
+			<ChoosableMixer name="Transition">
+				<RenderPass name="Alpha" type="Alpha" uniqueId="A006" baseType="Mixer"/>
+			</ChoosableMixer>
+		</VideoTrack>
+	</Layer>
+	<Layer uniqueId="1541836880868" layerIndex="17">
+		<Params name="Params">
+			<Param name="Name" default="Layer #" value="Layer 9V"/>
+		</Params>
+		<ClipTransition name="ClipTransition"/>
+		<LayerView name="LayerView">
+			<FoldParams name="FoldParams"/>
+		</LayerView>
+		<AudioTrack name="AudioTrack">
+			<AudioEffectChain name="AudioEffectChain"/>
+		</AudioTrack>
+		<VideoTrack name="VideoTrack">
+			<Params name="Params">
+				<ParamRange name="Opacity" default="0.5" value="0"/>
+				<ParamRange storage="3" name="Width" default="1920" value="1920"/>
+				<ParamRange storage="3" name="Height" default="1080" value="1080"/>
+			</Params>
+			<RenderPass name="RenderPassChain" type="RenderPassChain" uniqueId="RenderPassChain" baseType="RenderPassChain">
+				<RenderPass storage="0" name="Transform" type="TransformEffect" uniqueId="17122039101699797593" baseType="Effect" index="0">
+					<View name="View" bCanBeDisabled="0" bCanBeRemoved="0"/>
+				</RenderPass>
+			</RenderPass>
+			<ChoosableMixer name="Blend">
+				<Params name="Params">
+					<ParamChoice storage="3" name="Blend Mode" default="67464114" value="67464114" storeChoices="0"/>
+				</Params>
+				<RenderPass name="Add" type="Add" uniqueId="A005" baseType="Mixer"/>
+			</ChoosableMixer>
+			<ChoosableMixer name="Transition">
+				<RenderPass name="Alpha" type="Alpha" uniqueId="A006" baseType="Mixer"/>
+			</ChoosableMixer>
+		</VideoTrack>
+	</Layer>
+	<Layer uniqueId="1541836881130" layerIndex="18">
+		<Params name="Params">
+			<Param name="Name" default="Layer #" value="Layer 9A"/>
+		</Params>
+		<ClipTransition name="ClipTransition"/>
+		<LayerView name="LayerView">
+			<FoldParams name="FoldParams"/>
+		</LayerView>
+		<AudioTrack name="AudioTrack">
+			<AudioEffectChain name="AudioEffectChain"/>
+		</AudioTrack>
+		<VideoTrack name="VideoTrack">
+			<Params name="Params">
+				<ParamRange name="Opacity" default="0.5" value="1"/>
+				<ParamRange storage="3" name="Width" default="1920" value="1920"/>
+				<ParamRange storage="3" name="Height" default="1080" value="1080"/>
+			</Params>
+			<RenderPass name="RenderPassChain" type="RenderPassChain" uniqueId="RenderPassChain" baseType="RenderPassChain">
+				<RenderPass storage="0" name="Transform" type="TransformEffect" uniqueId="17122039101699797593" baseType="Effect" index="0">
+					<View name="View" bCanBeDisabled="0" bCanBeRemoved="0"/>
+				</RenderPass>
+			</RenderPass>
+			<ChoosableMixer name="Blend">
+				<Params name="Params">
+					<ParamChoice storage="3" name="Blend Mode" default="67464114" value="67464114" storeChoices="0"/>
+				</Params>
+				<RenderPass name="Add" type="Add" uniqueId="A005" baseType="Mixer"/>
+			</ChoosableMixer>
+			<ChoosableMixer name="Transition">
+				<RenderPass name="Alpha" type="Alpha" uniqueId="A006" baseType="Mixer"/>
+			</ChoosableMixer>
+		</VideoTrack>
+	</Layer>
+	<Layer uniqueId="1541836881147" layerIndex="19">
+		<Params name="Params">
+			<Param name="Name" default="Layer #" value="Layer 10V"/>
+		</Params>
+		<ClipTransition name="ClipTransition"/>
+		<LayerView name="LayerView">
+			<FoldParams name="FoldParams"/>
+		</LayerView>
+		<AudioTrack name="AudioTrack">
+			<AudioEffectChain name="AudioEffectChain"/>
+		</AudioTrack>
+		<VideoTrack name="VideoTrack">
+			<Params name="Params">
+				<ParamRange name="Opacity" default="0.5" value="0"/>
+				<ParamRange storage="3" name="Width" default="1920" value="1920"/>
+				<ParamRange storage="3" name="Height" default="1080" value="1080"/>
+			</Params>
+			<RenderPass name="RenderPassChain" type="RenderPassChain" uniqueId="RenderPassChain" baseType="RenderPassChain">
+				<RenderPass storage="0" name="Transform" type="TransformEffect" uniqueId="17122039101699797593" baseType="Effect" index="0">
+					<View name="View" bCanBeDisabled="0" bCanBeRemoved="0"/>
+				</RenderPass>
+			</RenderPass>
+			<ChoosableMixer name="Blend">
+				<Params name="Params">
+					<ParamChoice storage="3" name="Blend Mode" default="67464114" value="67464114" storeChoices="0"/>
+				</Params>
+				<RenderPass name="Add" type="Add" uniqueId="A005" baseType="Mixer"/>
+			</ChoosableMixer>
+			<ChoosableMixer name="Transition">
+				<RenderPass name="Alpha" type="Alpha" uniqueId="A006" baseType="Mixer"/>
+			</ChoosableMixer>
+		</VideoTrack>
+	</Layer>
+	<Layer uniqueId="1541836881156" layerIndex="20">
+		<Params name="Params">
+			<Param name="Name" default="Layer #" value="Layer 10A"/>
+		</Params>
+		<ClipTransition name="ClipTransition"/>
+		<LayerView name="LayerView">
+			<FoldParams name="FoldParams"/>
+		</LayerView>
+		<AudioTrack name="AudioTrack">
+			<AudioEffectChain name="AudioEffectChain"/>
+		</AudioTrack>
+		<VideoTrack name="VideoTrack">
+			<Params name="Params">
+				<ParamRange name="Opacity" default="0.5" value="1"/>
+				<ParamRange storage="3" name="Width" default="1920" value="1920"/>
+				<ParamRange storage="3" name="Height" default="1080" value="1080"/>
+			</Params>
+			<RenderPass name="RenderPassChain" type="RenderPassChain" uniqueId="RenderPassChain" baseType="RenderPassChain">
+				<RenderPass storage="0" name="Transform" type="TransformEffect" uniqueId="17122039101699797593" baseType="Effect" index="0">
+					<View name="View" bCanBeDisabled="0" bCanBeRemoved="0"/>
+				</RenderPass>
+			</RenderPass>
+			<ChoosableMixer name="Blend">
+				<Params name="Params">
+					<ParamChoice storage="3" name="Blend Mode" default="67464114" value="67464114" storeChoices="0"/>
+				</Params>
+				<RenderPass name="Add" type="Add" uniqueId="A005" baseType="Mixer"/>
+			</ChoosableMixer>
+			<ChoosableMixer name="Transition">
+				<RenderPass name="Alpha" type="Alpha" uniqueId="A006" baseType="Mixer"/>
+			</ChoosableMixer>
+		</VideoTrack>
+	</Layer>
+	<Layer uniqueId="1541836880886" layerIndex="21">
+		<Params name="Params"/>
+		<ClipTransition name="ClipTransition"/>
+		<LayerView name="LayerView">
+			<FoldParams name="FoldParams"/>
+		</LayerView>
+		<AudioTrack name="AudioTrack">
+			<AudioEffectChain name="AudioEffectChain"/>
+		</AudioTrack>
+		<VideoTrack name="VideoTrack">
+			<Params name="Params">
+				<ParamRange name="Opacity" default="0.5" value="1"/>
+				<ParamRange storage="3" name="Width" default="1920" value="1920"/>
+				<ParamRange storage="3" name="Height" default="1080" value="1080"/>
+			</Params>
+			<RenderPass name="RenderPassChain" type="RenderPassChain" uniqueId="RenderPassChain" baseType="RenderPassChain">
+				<RenderPass storage="0" name="Transform" type="TransformEffect" uniqueId="17122039101699797593" baseType="Effect" index="0">
+					<View name="View" bCanBeDisabled="0" bCanBeRemoved="0"/>
+				</RenderPass>
+			</RenderPass>
+			<ChoosableMixer name="Blend">
+				<Params name="Params">
+					<ParamChoice storage="3" name="Blend Mode" default="67464114" value="67464114" storeChoices="0"/>
+				</Params>
+				<RenderPass name="Add" type="Add" uniqueId="A005" baseType="Mixer"/>
+			</ChoosableMixer>
+			<ChoosableMixer name="Transition">
+				<RenderPass name="Alpha" type="Alpha" uniqueId="A006" baseType="Mixer"/>
+			</ChoosableMixer>
+		</VideoTrack>
+	</Layer>
+	<Column uniqueId="1541836880715" columnIndex="0"/>
+	<Column uniqueId="1541836880716" columnIndex="1"/>
+	<Column uniqueId="1541836880717" columnIndex="2"/>
+	<Column uniqueId="1541836880718" columnIndex="3"/>
+	<Column uniqueId="1541836880719" columnIndex="4"/>
+	<Column uniqueId="1541836880720" columnIndex="5"/>
+	<Column uniqueId="1541836880721" columnIndex="6"/>
+	<Column uniqueId="1541836880722" columnIndex="7"/>
 	<CrossFader name="CrossFader">
 		<AudioTrack name="AudioTrack">
 			<AudioEffectChain name="AudioEffectChain"/>
@@ -204,36 +802,29 @@
 			</ChoosableMixer>
 		</VideoTrack>
 	</CrossFader>
-	<TempoController name="TempoController">
+	<TempoController name="TempoController"/>
+	<Deck name="Deck" uniqueId="1541836880688" closed="0" numLayers="22" numColumns="8" deckIndex="0">
 		<Params name="Params">
-			<ParamRange name="Tempo" default="120" value="98"/>
+			<Param name="Name" default="empty" value="AV"/>
 		</Params>
-	</TempoController>
-	<Deck name="Deck" uniqueId="1537589025025" closed="0" numLayers="4" numColumns="8" deckIndex="0">
-		<Params name="Params">
-			<Param name="Name" default="empty" value="Desktop"/>
-		</Params>
-		<Clip name="Clip" uniqueId="1537709491371" layerIndex="0" columnIndex="0">
+		<Clip name="Clip" uniqueId="1541836880896" layerIndex="0" columnIndex="0">
 			<PreloadData>
-				<AudioFile value="D:\audio\Ableton\Samples\Exotica\29 098 Emin - Apple Loops\29 - Drums 02.aif"/>
-				<VideoFile value="D:\share\paperband-drum.mp4"/>
+				<VideoFile value="D:\git\tt.interaction\tt_interaction_rplidar_position_10_mountains\resolume\data\bg.mov"/>
 			</PreloadData>
 			<Params name="Params">
-				<Param storage="3" name="Name" default="paperband-drum" value="paperband-drum"/>
+				<Param storage="3" name="Name" default="bg" value="bg"/>
 				<ParamChoice storage="3" name="TransportType" default="0" value="0" storeChoices="0"/>
-				<ParamChoice name="Clip Trigger Style" default="0" value="2" storeChoices="0"/>
-				<Param name="AutoPilot" default="AAAAAAAAAAA=,AAAAAAAAAAA=" value="BwAAAAAAAAA=,AAAAAAAAAAA="/>
 			</Params>
 			<Transport name="Transport">
 				<Params name="Params">
-					<ParamRange name="Position" default="0" value="9.999999999999950262">
-						<ValueRange name="minMax" min="0" max="9795.0113378684800409"/>
-						<ValueRange name="startStop" min="0" max="9795.0113378684800409"/>
+					<ParamRange name="Position" default="0" value="31624.097464013790159">
+						<ValueRange name="minMax" min="0" max="43583.333333333328483"/>
+						<ValueRange name="startStop" min="0" max="43583.333333333328483"/>
 						<BehaviourDouble name="BehaviourDouble">
 							<PhaseSourceTimeline name="PhaseSourceTimeline" globalSpeedEnabled="1">
 								<Params name="Params">
-									<ParamRange storage="3" name="Beats" default="16" value="16"/>
-									<ParamRange storage="3" name="BPM" default="98.009074914343926821" value="98.009074914343926821"/>
+									<ParamRange storage="3" name="Beats" default="2" value="2"/>
+									<ParamRange storage="3" name="BPM" default="120" value="120"/>
 									<ParamRange storage="3" name="Speed" default="1" value="1"/>
 									<ParamChoice storage="3" name="Syncmode" default="0" value="0" storeChoices="0"/>
 									<ParamChoice storage="3" name="PlayDirection" default="1" value="1" storeChoices="0"/>
@@ -242,38 +833,18 @@
 									<Param storage="3" name="Finished" default="0" value="0"/>
 								</Params>
 								<ParamBasedDuration name="ParamBasedDuration"/>
-								<Beats_double name="Beats_double" mode="0" numDetectedBeats="-1" numManualBeats="16" detectedTempo="-1" manualTempo="98.009074914343926821" detected="0"/>
+								<Beats_double name="Beats_double" mode="0" numDetectedBeats="-1" numManualBeats="2" detectedTempo="-1" manualTempo="120" detected="0"/>
 							</PhaseSourceTimeline>
 						</BehaviourDouble>
 					</ParamRange>
 				</Params>
 			</Transport>
 			<ClipView name="ClipView">
-				<FoldParams name="FoldParams">
-					<FoldState component="/clipproperties/cuepoints/" folded="1"/>
-					<FoldState component="/clipproperties/transport/" folded="0"/>
-					<FoldState component="/groupedcomponent/groupedcomponent/audiotrackinfocomponent/tracksettingscomponent/audiosettingscomponent/" folded="0"/>
-					<FoldState component="/groupedcomponent/renderpasschaincomponent/" folded="0"/>
-					<FoldState component="/groupedcomponent/renderpasschaincomponent/transform/" folded="0"/>
-					<FoldState component="/groupedcomponent/renderpasschaincomponent/transform/anchor/" folded="1"/>
-					<FoldState component="/groupedcomponent/renderpasschaincomponent/transform/rotation/" folded="1"/>
-					<FoldState component="/groupedcomponent/renderpasschaincomponent/transform/scale/" folded="1"/>
-					<FoldState component="/groupedcomponent/videotrackinfocomponent/" folded="1"/>
-					<FoldState component="/groupedcomponent/videotrackinfocomponent/tracksettingscomponent/" folded="1"/>
-					<FoldState component="/groupedcomponent/videotrackinfocomponent/tracksettingscomponent/videomixerparamscomponent/" folded="0"/>
-					<FoldState component="/groupedcomponent/videotrackinfocomponent/tracksettingscomponent/videoparamscomponent/" folded="0"/>
-					<FoldState component="/groupedcomponent/videotrackinfocomponent/tracksettingscomponent/videosettingscomponent/" folded="0"/>
-				</FoldParams>
+				<FoldParams name="FoldParams"/>
 			</ClipView>
-			<AudioTrack name="AudioTrack">
-				<AudioEffectChain name="AudioEffectChain"/>
-				<PrimarySource>
-					<AudioFileSource FileName="D:\audio\Ableton\Samples\Exotica\29 098 Emin - Apple Loops\29 - Drums 02.aif"/>
-				</PrimarySource>
-			</AudioTrack>
 			<VideoTrack name="VideoTrack" manualDuration="0">
 				<Params name="Params">
-					<ParamRange storage="3" name="Width" default="1920" value="1920"/>
+					<ParamRange storage="3" name="Width" default="3840" value="3840"/>
 					<ParamRange storage="3" name="Height" default="1080" value="1080"/>
 					<Param storage="3" name="RScale" default="1" value="1"/>
 					<Param storage="3" name="GScale" default="1" value="1"/>
@@ -282,227 +853,48 @@
 				</Params>
 				<RenderPass name="RenderPassChain" type="RenderPassChain" uniqueId="RenderPassChain" baseType="RenderPassChain">
 					<RenderPass storage="0" name="Transform" type="TransformEffect" uniqueId="17122039101699797593" baseType="Effect" index="0">
+						<Params name="Params">
+							<ParamRange name="Scale" default="100" value="52.631578947368417687"/>
+						</Params>
 						<View name="View" bCanBeDisabled="0" bCanBeRemoved="0"/>
 					</RenderPass>
 				</RenderPass>
 				<ChoosableMixer name="Blend"/>
 				<PrimarySource>
-					<VideoSource name="VideoSource" width="1920" height="1080" type="VideoFormatReaderSource">
+					<VideoSource name="VideoSource" width="3840" height="1080" type="VideoFormatReaderSource">
 						<RenderPass name="RenderPassChain" type="RenderPassChain" uniqueId="RenderPassChain" baseType="RenderPassChain"/>
-						<VideoFormatReaderSource fileName="D:\share\paperband-drum.mp4" LoadingThread="TTM_MESSAGE"/>
+						<VideoFormatReaderSource fileName="D:\git\tt.interaction\tt_interaction_rplidar_position_10_mountains\resolume\data\bg.mov" LoadingThread="TTM_THREADED"/>
 					</VideoSource>
 				</PrimarySource>
 			</VideoTrack>
 		</Clip>
-		<Clip name="Clip" uniqueId="1537709491370" layerIndex="1" columnIndex="0">
+		<Clip name="Clip" uniqueId="1541836880691" layerIndex="1" columnIndex="0">
 			<PreloadData>
-				<AudioFile value="D:\audio\Ableton\Samples\Exotica\29 098 Emin - Apple Loops\29 - Koto 01.aif"/>
-				<VideoFile value="D:\share\paperband-keybroad.mp4"/>
+				<VideoFile value="D:\git\tt.interaction\tt_interaction_rplidar_position_10_mountains\resolume\data\1mstm.mov"/>
 			</PreloadData>
 			<Params name="Params">
-				<Param storage="3" name="Name" default="paperband-keybroad" value="paperband-keybroad"/>
+				<Param storage="3" name="Name" default="1mstm" value="1mstm"/>
 				<ParamChoice storage="3" name="TransportType" default="0" value="0" storeChoices="0"/>
-				<ParamChoice name="Clip Trigger Style" default="0" value="2" storeChoices="0"/>
 			</Params>
-			<Transport name="Transport">
+			<Transport name="Transport" smpteOffset="0">
 				<Params name="Params">
-					<ParamRange name="Position" default="0" value="139.99999999999809575">
-						<ValueRange name="minMax" min="0" max="9795.0113378684800409"/>
-						<ValueRange name="startStop" min="0" max="9795.0113378684800409"/>
+					<ParamRange name="Position" default="0" value="5083.3333333333330302">
+						<ValueRange name="minMax" min="0" max="5083.3333333333330302"/>
+						<ValueRange name="startStop" min="0" max="5083.3333333333330302"/>
 						<BehaviourDouble name="BehaviourDouble">
 							<PhaseSourceTimeline name="PhaseSourceTimeline" globalSpeedEnabled="1">
 								<Params name="Params">
-									<ParamRange storage="3" name="Beats" default="16" value="16"/>
-									<ParamRange storage="3" name="BPM" default="98.009074914343926821" value="98.009074914343926821"/>
+									<ParamRange storage="3" name="Beats" default="8" value="8"/>
+									<ParamRange storage="3" name="BPM" default="94.42622950819672667" value="94.42622950819672667"/>
 									<ParamRange storage="3" name="Speed" default="1" value="1"/>
 									<ParamChoice storage="3" name="Syncmode" default="0" value="0" storeChoices="0"/>
 									<ParamChoice storage="3" name="PlayDirection" default="1" value="1" storeChoices="0"/>
-									<ParamChoice storage="3" name="PlayMode" default="0" value="0" storeChoices="0"/>
+									<ParamChoice storage="3" name="PlayMode" default="0" value="2" storeChoices="0"/>
 									<ParamChoice storage="3" name="PlayModeAway" default="0" value="0" storeChoices="0"/>
-									<Param storage="3" name="Finished" default="0" value="0"/>
+									<Param storage="3" name="Finished" default="0" value="128"/>
 								</Params>
 								<ParamBasedDuration name="ParamBasedDuration"/>
-								<Beats_double name="Beats_double" mode="0" numDetectedBeats="-1" numManualBeats="16" detectedTempo="-1" manualTempo="98.009074914343926821" detected="0"/>
-							</PhaseSourceTimeline>
-						</BehaviourDouble>
-					</ParamRange>
-				</Params>
-			</Transport>
-			<ClipView name="ClipView">
-				<FoldParams name="FoldParams">
-					<FoldState component="/groupedcomponent/renderpasschaincomponent/delayrgb/" folded="0"/>
-					<FoldState component="/groupedcomponent/renderpasschaincomponent/delayrgb/mixerparamscomponent/" folded="0"/>
-					<FoldState component="/groupedcomponent/renderpasschaincomponent/dotscreen/" folded="0"/>
-					<FoldState component="/groupedcomponent/renderpasschaincomponent/dotscreen/mixerparamscomponent/" folded="0"/>
-					<FoldState component="/groupedcomponent/renderpasschaincomponent/invertrgb/" folded="0"/>
-					<FoldState component="/groupedcomponent/renderpasschaincomponent/invertrgb/mixerparamscomponent/" folded="0"/>
-					<FoldState component="/groupedcomponent/renderpasschaincomponent/transform/" folded="1"/>
-					<FoldState component="/groupedcomponent/videotrackinfocomponent/" folded="1"/>
-					<FoldState component="/groupedcomponent/videotrackinfocomponent/tracksettingscomponent/" folded="1"/>
-				</FoldParams>
-			</ClipView>
-			<AudioTrack name="AudioTrack">
-				<AudioEffectChain name="AudioEffectChain"/>
-				<PrimarySource>
-					<AudioFileSource FileName="D:\audio\Ableton\Samples\Exotica\29 098 Emin - Apple Loops\29 - Koto 01.aif"/>
-				</PrimarySource>
-			</AudioTrack>
-			<VideoTrack name="VideoTrack" manualDuration="0">
-				<Params name="Params">
-					<ParamRange storage="3" name="Width" default="1920" value="1920"/>
-					<ParamRange storage="3" name="Height" default="1080" value="1080"/>
-					<Param storage="3" name="RScale" default="1" value="1"/>
-					<Param storage="3" name="GScale" default="1" value="1"/>
-					<Param storage="3" name="BScale" default="1" value="1"/>
-					<Param storage="3" name="AScale" default="0" value="0"/>
-				</Params>
-				<RenderPass name="RenderPassChain" type="RenderPassChain" uniqueId="RenderPassChain" baseType="RenderPassChain">
-					<RenderPass storage="0" name="Transform" type="TransformEffect" uniqueId="17122039101699797593" baseType="Effect" index="0">
-						<View name="View" folded="1" bCanBeDisabled="0" bCanBeRemoved="0"/>
-					</RenderPass>
-					<RenderPass storage="0" name="DelayRGB" type="DryWetEffect" uniqueId="A152" baseType="DryWetEffect" index="1">
-						<RenderPass name="DelayRGB" type="DelayRGB" uniqueId="A152" baseType="Effect" dwType="Effect"/>
-						<ChoosableMixer name="Mixer">
-							<RenderPass name="Alpha" type="Alpha" uniqueId="A006" baseType="Mixer"/>
-						</ChoosableMixer>
-					</RenderPass>
-				</RenderPass>
-				<ChoosableMixer name="Blend"/>
-				<PrimarySource>
-					<VideoSource name="VideoSource" width="1920" height="1080" type="VideoFormatReaderSource">
-						<RenderPass name="RenderPassChain" type="RenderPassChain" uniqueId="RenderPassChain" baseType="RenderPassChain"/>
-						<VideoFormatReaderSource fileName="D:\share\paperband-keybroad.mp4" LoadingThread="TTM_MESSAGE"/>
-					</VideoSource>
-				</PrimarySource>
-			</VideoTrack>
-		</Clip>
-		<Clip name="Clip" uniqueId="1537709491369" layerIndex="2" columnIndex="0">
-			<PreloadData>
-				<AudioFile value="D:\audio\Ableton\Samples\Exotica\29 098 Emin - Apple Loops\29 - Sitar.aif"/>
-				<VideoFile value="D:\share\paperband-guitar.mp4"/>
-			</PreloadData>
-			<Params name="Params">
-				<Param storage="3" name="Name" default="paperband-guitar" value="paperband-guitar"/>
-				<ParamChoice storage="3" name="TransportType" default="0" value="0" storeChoices="0"/>
-				<ParamChoice name="Clip Trigger Style" default="0" value="2" storeChoices="0"/>
-			</Params>
-			<Transport name="Transport">
-				<Params name="Params">
-					<ParamRange name="Position" default="0" value="69.999999999999090505">
-						<ValueRange name="minMax" min="0" max="9795.0113378684800409"/>
-						<ValueRange name="startStop" min="0" max="9795.0113378684800409"/>
-						<BehaviourDouble name="BehaviourDouble">
-							<PhaseSourceTimeline name="PhaseSourceTimeline" globalSpeedEnabled="1">
-								<Params name="Params">
-									<ParamRange storage="3" name="Beats" default="16" value="16"/>
-									<ParamRange storage="3" name="BPM" default="98.009074914343926821" value="98.009074914343926821"/>
-									<ParamRange storage="3" name="Speed" default="1" value="1"/>
-									<ParamChoice storage="3" name="Syncmode" default="0" value="0" storeChoices="0"/>
-									<ParamChoice storage="3" name="PlayDirection" default="1" value="1" storeChoices="0"/>
-									<ParamChoice storage="3" name="PlayMode" default="0" value="0" storeChoices="0"/>
-									<ParamChoice storage="3" name="PlayModeAway" default="0" value="0" storeChoices="0"/>
-									<Param storage="3" name="Finished" default="0" value="0"/>
-								</Params>
-								<ParamBasedDuration name="ParamBasedDuration"/>
-								<Beats_double name="Beats_double" mode="0" numDetectedBeats="-1" numManualBeats="16" detectedTempo="-1" manualTempo="98.009074914343926821" detected="0"/>
-							</PhaseSourceTimeline>
-						</BehaviourDouble>
-					</ParamRange>
-				</Params>
-			</Transport>
-			<ClipView name="ClipView">
-				<FoldParams name="FoldParams">
-					<FoldState component="/groupedcomponent/groupedcomponent/audiotrackinfocomponent/" folded="0"/>
-					<FoldState component="/groupedcomponent/groupedcomponent/audiotrackinfocomponent/tracksettingscomponent/" folded="0"/>
-					<FoldState component="/groupedcomponent/renderpasschaincomponent/edgedetection/" folded="0"/>
-					<FoldState component="/groupedcomponent/renderpasschaincomponent/edgedetection/mixerparamscomponent/" folded="0"/>
-					<FoldState component="/groupedcomponent/renderpasschaincomponent/freeze/" folded="0"/>
-					<FoldState component="/groupedcomponent/renderpasschaincomponent/freeze/mixerparamscomponent/" folded="0"/>
-					<FoldState component="/groupedcomponent/renderpasschaincomponent/goo/" folded="0"/>
-					<FoldState component="/groupedcomponent/renderpasschaincomponent/goo/mixerparamscomponent/" folded="0"/>
-					<FoldState component="/groupedcomponent/renderpasschaincomponent/heat/" folded="0"/>
-					<FoldState component="/groupedcomponent/renderpasschaincomponent/heat/mixerparamscomponent/" folded="0"/>
-					<FoldState component="/groupedcomponent/renderpasschaincomponent/iterate/" folded="0"/>
-					<FoldState component="/groupedcomponent/renderpasschaincomponent/iterate/mixerparamscomponent/" folded="0"/>
-					<FoldState component="/groupedcomponent/renderpasschaincomponent/kaleidoscope/" folded="0"/>
-					<FoldState component="/groupedcomponent/renderpasschaincomponent/kaleidoscope/mixerparamscomponent/" folded="0"/>
-					<FoldState component="/groupedcomponent/renderpasschaincomponent/keystone/" folded="0"/>
-					<FoldState component="/groupedcomponent/renderpasschaincomponent/keystone/mixerparamscomponent/" folded="0"/>
-					<FoldState component="/groupedcomponent/renderpasschaincomponent/noisy/" folded="0"/>
-					<FoldState component="/groupedcomponent/renderpasschaincomponent/noisy/mixerparamscomponent/" folded="0"/>
-					<FoldState component="/groupedcomponent/renderpasschaincomponent/polarkaleido/" folded="0"/>
-					<FoldState component="/groupedcomponent/renderpasschaincomponent/polarkaleido/mixerparamscomponent/" folded="0"/>
-					<FoldState component="/groupedcomponent/renderpasschaincomponent/ripples/" folded="0"/>
-					<FoldState component="/groupedcomponent/renderpasschaincomponent/ripples/mixerparamscomponent/" folded="0"/>
-					<FoldState component="/groupedcomponent/renderpasschaincomponent/shiftglitch/" folded="0"/>
-					<FoldState component="/groupedcomponent/renderpasschaincomponent/shiftglitch/mixerparamscomponent/" folded="0"/>
-					<FoldState component="/groupedcomponent/renderpasschaincomponent/snow/" folded="0"/>
-					<FoldState component="/groupedcomponent/renderpasschaincomponent/snow/mixerparamscomponent/" folded="0"/>
-					<FoldState component="/groupedcomponent/renderpasschaincomponent/stingysphere/" folded="0"/>
-					<FoldState component="/groupedcomponent/renderpasschaincomponent/stingysphere/mixerparamscomponent/" folded="0"/>
-					<FoldState component="/groupedcomponent/renderpasschaincomponent/transform/" folded="1"/>
-					<FoldState component="/groupedcomponent/renderpasschaincomponent/twisted/" folded="0"/>
-					<FoldState component="/groupedcomponent/renderpasschaincomponent/twisted/mixerparamscomponent/" folded="0"/>
-				</FoldParams>
-			</ClipView>
-			<AudioTrack name="AudioTrack">
-				<AudioEffectChain name="AudioEffectChain"/>
-				<PrimarySource>
-					<AudioFileSource FileName="D:\audio\Ableton\Samples\Exotica\29 098 Emin - Apple Loops\29 - Sitar.aif"/>
-				</PrimarySource>
-			</AudioTrack>
-			<VideoTrack name="VideoTrack" manualDuration="0">
-				<Params name="Params">
-					<ParamRange storage="3" name="Width" default="1920" value="1920"/>
-					<ParamRange storage="3" name="Height" default="1080" value="1080"/>
-					<Param storage="3" name="RScale" default="1" value="1"/>
-					<Param storage="3" name="GScale" default="1" value="1"/>
-					<Param storage="3" name="BScale" default="1" value="1"/>
-					<Param storage="3" name="AScale" default="0" value="0"/>
-				</Params>
-				<RenderPass name="RenderPassChain" type="RenderPassChain" uniqueId="RenderPassChain" baseType="RenderPassChain">
-					<RenderPass storage="0" name="Transform" type="TransformEffect" uniqueId="17122039101699797593" baseType="Effect" index="0">
-						<View name="View" folded="1" bCanBeDisabled="0" bCanBeRemoved="0"/>
-					</RenderPass>
-				</RenderPass>
-				<ChoosableMixer name="Blend"/>
-				<PrimarySource>
-					<VideoSource name="VideoSource" width="1920" height="1080" type="VideoFormatReaderSource">
-						<RenderPass name="RenderPassChain" type="RenderPassChain" uniqueId="RenderPassChain" baseType="RenderPassChain"/>
-						<VideoFormatReaderSource fileName="D:\share\paperband-guitar.mp4" LoadingThread="TTM_MESSAGE"/>
-					</VideoSource>
-				</PrimarySource>
-			</VideoTrack>
-		</Clip>
-		<Clip name="Clip" uniqueId="1537709491372" layerIndex="3" columnIndex="0">
-			<PreloadData>
-				<AudioFile value="D:\audio\Ableton\Samples\Exotica\29 098 Emin - Apple Loops\29 - Bass.aif"/>
-				<VideoFile value="D:\share\paperband-bass25.mp4"/>
-			</PreloadData>
-			<Params name="Params">
-				<Param storage="3" name="Name" default="paperband-bass25" value="paperband-bass25"/>
-				<ParamChoice storage="3" name="TransportType" default="0" value="0" storeChoices="0"/>
-				<ParamChoice name="Clip Trigger Style" default="0" value="2" storeChoices="0"/>
-			</Params>
-			<Transport name="Transport">
-				<Params name="Params">
-					<ParamRange name="Position" default="0" value="149.99999999999795364">
-						<ValueRange name="minMax" min="0" max="9795.0113378684800409"/>
-						<ValueRange name="startStop" min="0" max="9795.0113378684800409"/>
-						<BehaviourDouble name="BehaviourDouble">
-							<PhaseSourceTimeline name="PhaseSourceTimeline" globalSpeedEnabled="1">
-								<Params name="Params">
-									<ParamRange storage="3" name="Beats" default="16" value="16"/>
-									<ParamRange storage="3" name="BPM" default="98.009074914343926821" value="98.009074914343926821"/>
-									<ParamRange storage="3" name="Speed" default="1" value="1"/>
-									<ParamChoice storage="3" name="Syncmode" default="0" value="0" storeChoices="0"/>
-									<ParamChoice storage="3" name="PlayDirection" default="1" value="1" storeChoices="0"/>
-									<ParamChoice storage="3" name="PlayMode" default="0" value="0" storeChoices="0"/>
-									<ParamChoice storage="3" name="PlayModeAway" default="0" value="0" storeChoices="0"/>
-									<Param storage="3" name="Finished" default="0" value="0"/>
-								</Params>
-								<ParamBasedDuration name="ParamBasedDuration"/>
-								<Beats_double name="Beats_double" mode="0" numDetectedBeats="-1" numManualBeats="16" detectedTempo="-1" manualTempo="98.009074914343926821" detected="0"/>
+								<Beats_double name="Beats_double" mode="0" numDetectedBeats="-1" numManualBeats="8" detectedTempo="-1" manualTempo="94.42622950819672667" detected="0"/>
 							</PhaseSourceTimeline>
 						</BehaviourDouble>
 					</ParamRange>
@@ -511,66 +903,1010 @@
 			<ClipView name="ClipView">
 				<FoldParams name="FoldParams">
 					<FoldState component="/clipproperties/beatloopr/" folded="1"/>
-					<FoldState component="/groupedcomponent/groupedcomponent/audiotrackinfocomponent/" folded="0"/>
-					<FoldState component="/groupedcomponent/groupedcomponent/audiotrackinfocomponent/tracksettingscomponent/" folded="0"/>
-					<FoldState component="/groupedcomponent/renderpasschaincomponent/blow/" folded="1"/>
-					<FoldState component="/groupedcomponent/renderpasschaincomponent/blow/mixerparamscomponent/" folded="0"/>
-					<FoldState component="/groupedcomponent/renderpasschaincomponent/dotscreen/" folded="0"/>
-					<FoldState component="/groupedcomponent/renderpasschaincomponent/dotscreen/mixerparamscomponent/" folded="0"/>
-					<FoldState component="/groupedcomponent/renderpasschaincomponent/dropshadow/" folded="0"/>
-					<FoldState component="/groupedcomponent/renderpasschaincomponent/dropshadow/color/paramcolorcomponent/" folded="1"/>
-					<FoldState component="/groupedcomponent/renderpasschaincomponent/dropshadow/mixerparamscomponent/" folded="0"/>
-					<FoldState component="/groupedcomponent/renderpasschaincomponent/edgedetection/0" folded="0"/>
-					<FoldState component="/groupedcomponent/renderpasschaincomponent/edgedetection/0mixerparamscomponent/" folded="0"/>
-					<FoldState component="/groupedcomponent/renderpasschaincomponent/exposure/" folded="0"/>
-					<FoldState component="/groupedcomponent/renderpasschaincomponent/exposure/mixerparamscomponent/" folded="0"/>
-					<FoldState component="/groupedcomponent/renderpasschaincomponent/fisheye/" folded="0"/>
-					<FoldState component="/groupedcomponent/renderpasschaincomponent/fisheye/mixerparamscomponent/" folded="0"/>
-					<FoldState component="/groupedcomponent/renderpasschaincomponent/transform/" folded="1"/>
+				</FoldParams>
+			</ClipView>
+			<VideoTrack name="VideoTrack" manualDuration="0">
+				<Params name="Params">
+					<ParamRange storage="3" name="Width" default="1600" value="1600"/>
+					<ParamRange storage="3" name="Height" default="1600" value="1600"/>
+					<Param storage="3" name="RScale" default="1" value="1"/>
+					<Param storage="3" name="GScale" default="1" value="1"/>
+					<Param storage="3" name="BScale" default="1" value="1"/>
+					<Param storage="3" name="AScale" default="1" value="1"/>
+				</Params>
+				<RenderPass name="RenderPassChain" type="RenderPassChain" uniqueId="RenderPassChain" baseType="RenderPassChain">
+					<RenderPass storage="0" name="Transform" type="TransformEffect" uniqueId="17122039101699797593" baseType="Effect" index="0">
+						<Params name="Params">
+							<ParamRange name="Scale" default="100" value="54.662379421221864106"/>
+						</Params>
+						<View name="View" bCanBeDisabled="0" bCanBeRemoved="0"/>
+					</RenderPass>
+				</RenderPass>
+				<ChoosableMixer name="Blend"/>
+				<PrimarySource>
+					<VideoSource name="VideoSource" width="1600" height="1600" type="VideoFormatReaderSource">
+						<RenderPass name="RenderPassChain" type="RenderPassChain" uniqueId="RenderPassChain" baseType="RenderPassChain"/>
+						<VideoFormatReaderSource fileName="D:\git\tt.interaction\tt_interaction_rplidar_position_10_mountains\resolume\data\1mstm.mov" LoadingThread="TTM_THREADED"/>
+					</VideoSource>
+				</PrimarySource>
+			</VideoTrack>
+		</Clip>
+		<Clip name="Clip" uniqueId="1542795854610" layerIndex="2" columnIndex="0">
+			<Params name="Params">
+				<Param storage="3" name="Name" default="1mtm" value="1mtm"/>
+				<ParamChoice storage="3" name="TransportType" default="0" value="1" storeChoices="0"/>
+				<ParamChoice name="Beat Snap" default="0" value="1" storeChoices="0"/>
+			</Params>
+			<Transport name="Transport">
+				<Params name="Params">
+					<ParamRange name="Position" default="0" value="3439.9999998250268618">
+						<ValueRange name="minMax" min="0" max="8000"/>
+						<ValueRange name="startStop" min="0" max="8000"/>
+						<BehaviourDouble name="BehaviourDouble">
+							<PhaseSourceBPMBeatloopr name="PhaseSourceBPMBeatloopr" globalSpeedEnabled="1">
+								<Params name="Params">
+									<ParamRange storage="3" name="Beats" default="16" value="16"/>
+									<ParamRange storage="3" name="BPM" default="120" value="120"/>
+									<ParamRange storage="3" name="Speed" default="1" value="1"/>
+									<ParamChoice storage="3" name="Syncmode" default="0" value="1" storeChoices="0"/>
+									<ParamChoice storage="3" name="PlayDirection" default="1" value="1" storeChoices="0"/>
+									<ParamChoice storage="3" name="PlayMode" default="0" value="2" storeChoices="0"/>
+									<ParamChoice storage="3" name="PlayModeAway" default="0" value="0" storeChoices="0"/>
+									<Param storage="3" name="Finished" default="0" value="0"/>
+									<ParamChoice storage="3" name="BeatLoop" default="-1" value="-1" storeChoices="0"/>
+									<Param storage="3" name="Catchup" default="0" value="0"/>
+								</Params>
+								<ParamBasedDuration name="ParamBasedDuration"/>
+								<Beats_double name="Beats_double" mode="0" numDetectedBeats="-1" numManualBeats="16" detectedTempo="-1" manualTempo="120" detected="0"/>
+							</PhaseSourceBPMBeatloopr>
+						</BehaviourDouble>
+					</ParamRange>
+				</Params>
+			</Transport>
+			<ClipView name="ClipView">
+				<FoldParams name="FoldParams">
+					<FoldState component="/clipproperties/cuepoints/" folded="0"/>
+					<FoldState component="/clipproperties/dashboard/" folded="0"/>
 				</FoldParams>
 			</ClipView>
 			<AudioTrack name="AudioTrack">
 				<AudioEffectChain name="AudioEffectChain"/>
 				<PrimarySource>
-					<AudioFileSource FileName="D:\audio\Ableton\Samples\Exotica\29 098 Emin - Apple Loops\29 - Bass.aif"/>
+					<AudioFileSource FileName="D:\git\tt.interaction\tt_interaction_rplidar_position_10_mountains\sound\1mtm.wav"/>
 				</PrimarySource>
 			</AudioTrack>
+		</Clip>
+		<Clip name="Clip" uniqueId="1541836880966" layerIndex="3" columnIndex="0">
+			<PreloadData>
+				<VideoFile value="D:\git\tt.interaction\tt_interaction_rplidar_position_10_mountains\resolume\data\2mstm.mov"/>
+			</PreloadData>
+			<Params name="Params">
+				<Param storage="3" name="Name" default="2mstm" value="2mstm"/>
+				<ParamChoice storage="3" name="TransportType" default="0" value="0" storeChoices="0"/>
+			</Params>
+			<Transport name="Transport">
+				<Params name="Params">
+					<ParamRange name="Position" default="0" value="7000">
+						<ValueRange name="minMax" min="0" max="7000"/>
+						<ValueRange name="startStop" min="0" max="7000"/>
+						<BehaviourDouble name="BehaviourDouble">
+							<PhaseSourceTimeline name="PhaseSourceTimeline" globalSpeedEnabled="1">
+								<Params name="Params">
+									<ParamRange storage="3" name="Beats" default="16" value="16"/>
+									<ParamRange storage="3" name="BPM" default="137.1428571428571388" value="500"/>
+									<ParamRange storage="3" name="Speed" default="1" value="1"/>
+									<ParamChoice storage="3" name="Syncmode" default="0" value="0" storeChoices="0"/>
+									<ParamChoice storage="3" name="PlayDirection" default="1" value="1" storeChoices="0"/>
+									<ParamChoice storage="3" name="PlayMode" default="0" value="2" storeChoices="0"/>
+									<ParamChoice storage="3" name="PlayModeAway" default="0" value="2" storeChoices="0"/>
+									<Param storage="3" name="Finished" default="0" value="128"/>
+								</Params>
+								<ParamBasedDuration name="ParamBasedDuration"/>
+								<Beats_double name="Beats_double" mode="0" numDetectedBeats="-1" numManualBeats="16" detectedTempo="-1" manualTempo="137.1428571428571388" detected="0"/>
+							</PhaseSourceTimeline>
+						</BehaviourDouble>
+					</ParamRange>
+				</Params>
+			</Transport>
+			<ClipView name="ClipView">
+				<FoldParams name="FoldParams"/>
+			</ClipView>
 			<VideoTrack name="VideoTrack" manualDuration="0">
 				<Params name="Params">
-					<ParamRange storage="3" name="Width" default="1920" value="1920"/>
-					<ParamRange storage="3" name="Height" default="1080" value="1080"/>
+					<ParamRange storage="3" name="Width" default="1600" value="1600"/>
+					<ParamRange storage="3" name="Height" default="1600" value="1600"/>
 					<Param storage="3" name="RScale" default="1" value="1"/>
 					<Param storage="3" name="GScale" default="1" value="1"/>
 					<Param storage="3" name="BScale" default="1" value="1"/>
-					<Param storage="3" name="AScale" default="0" value="0"/>
+					<Param storage="3" name="AScale" default="1" value="1"/>
 				</Params>
 				<RenderPass name="RenderPassChain" type="RenderPassChain" uniqueId="RenderPassChain" baseType="RenderPassChain">
 					<RenderPass storage="0" name="Transform" type="TransformEffect" uniqueId="17122039101699797593" baseType="Effect" index="0">
-						<View name="View" folded="1" bCanBeDisabled="0" bCanBeRemoved="0"/>
-					</RenderPass>
-					<RenderPass storage="0" name="Edge Detection" type="DryWetEffect" uniqueId="MEDG" baseType="DryWetEffect" index="1">
-						<RenderPass name="Edge Detection" type="FFGLEffect" uniqueId="MEDG" baseType="Effect" dwType="Effect">
-							<Params name="Params">
-								<ParamRange name="Multiplier" default="0.20000000298023223877" value="0.25239616613418530688"/>
-							</Params>
-							<FFGLPlugin name="FFGLPlugin" uniqueId="MEDG" fileName="C:\Program Files\Resolume Arena 6\plugins\vfx\FFGLEdgeDetection.dll"/>
-						</RenderPass>
-						<ChoosableMixer name="Mixer">
-							<RenderPass name="Alpha" type="Alpha" uniqueId="A006" baseType="Mixer"/>
-						</ChoosableMixer>
+						<Params name="Params">
+							<ParamRange name="Scale" default="100" value="57.877813504823151902"/>
+						</Params>
+						<View name="View" bCanBeDisabled="0" bCanBeRemoved="0"/>
 					</RenderPass>
 				</RenderPass>
 				<ChoosableMixer name="Blend"/>
 				<PrimarySource>
-					<VideoSource name="VideoSource" width="1920" height="1080" type="VideoFormatReaderSource">
+					<VideoSource name="VideoSource" width="1600" height="1600" type="VideoFormatReaderSource">
 						<RenderPass name="RenderPassChain" type="RenderPassChain" uniqueId="RenderPassChain" baseType="RenderPassChain"/>
-						<VideoFormatReaderSource fileName="D:\share\paperband-bass25.mp4" LoadingThread="TTM_MESSAGE"/>
+						<VideoFormatReaderSource fileName="D:\git\tt.interaction\tt_interaction_rplidar_position_10_mountains\resolume\data\2mstm.mov" LoadingThread="TTM_THREADED"/>
+					</VideoSource>
+				</PrimarySource>
+			</VideoTrack>
+		</Clip>
+		<Clip name="Clip" uniqueId="1542795854611" layerIndex="4" columnIndex="0">
+			<Params name="Params">
+				<Param storage="3" name="Name" default="2mtm" value="2mtm"/>
+				<ParamChoice storage="3" name="TransportType" default="0" value="1" storeChoices="0"/>
+				<ParamChoice name="Beat Snap" default="0" value="1" storeChoices="0"/>
+			</Params>
+			<Transport name="Transport">
+				<Params name="Params">
+					<ParamRange name="Position" default="0" value="590.0000000003921059">
+						<ValueRange name="minMax" min="0" max="8000"/>
+						<ValueRange name="startStop" min="0" max="8000"/>
+						<BehaviourDouble name="BehaviourDouble">
+							<PhaseSourceBPMBeatloopr name="PhaseSourceBPMBeatloopr" globalSpeedEnabled="1">
+								<Params name="Params">
+									<ParamRange storage="3" name="Beats" default="16" value="16"/>
+									<ParamRange storage="3" name="BPM" default="120" value="120"/>
+									<ParamRange storage="3" name="Speed" default="1" value="1"/>
+									<ParamChoice storage="3" name="Syncmode" default="0" value="1" storeChoices="0"/>
+									<ParamChoice storage="3" name="PlayDirection" default="1" value="1" storeChoices="0"/>
+									<ParamChoice storage="3" name="PlayMode" default="0" value="2" storeChoices="0"/>
+									<ParamChoice storage="3" name="PlayModeAway" default="0" value="0" storeChoices="0"/>
+									<Param storage="3" name="Finished" default="0" value="0"/>
+									<ParamChoice storage="3" name="BeatLoop" default="-1" value="-1" storeChoices="0"/>
+									<Param storage="3" name="Catchup" default="0" value="0"/>
+								</Params>
+								<ParamBasedDuration name="ParamBasedDuration"/>
+								<Beats_double name="Beats_double" mode="0" numDetectedBeats="-1" numManualBeats="16" detectedTempo="-1" manualTempo="120" detected="0"/>
+							</PhaseSourceBPMBeatloopr>
+						</BehaviourDouble>
+					</ParamRange>
+				</Params>
+			</Transport>
+			<ClipView name="ClipView">
+				<FoldParams name="FoldParams"/>
+			</ClipView>
+			<AudioTrack name="AudioTrack">
+				<AudioEffectChain name="AudioEffectChain"/>
+				<PrimarySource>
+					<AudioFileSource FileName="D:\git\tt.interaction\tt_interaction_rplidar_position_10_mountains\sound\2mtm.wav"/>
+				</PrimarySource>
+			</AudioTrack>
+		</Clip>
+		<Clip name="Clip" uniqueId="1541836880909" layerIndex="5" columnIndex="0">
+			<PreloadData>
+				<VideoFile value="D:\git\tt.interaction\tt_interaction_rplidar_position_10_mountains\resolume\data\3mstm.mov"/>
+			</PreloadData>
+			<Params name="Params">
+				<Param storage="3" name="Name" default="3mstm" value="3mstm"/>
+				<ParamChoice storage="3" name="TransportType" default="0" value="0" storeChoices="0"/>
+				<ParamChoice name="Clip Trigger Style" default="0" value="1" storeChoices="0"/>
+			</Params>
+			<Transport name="Transport">
+				<Params name="Params">
+					<ParamRange name="Position" default="0" value="333.82572836744003553">
+						<ValueRange name="minMax" min="0" max="2166.6666666666665151"/>
+						<ValueRange name="startStop" min="0" max="2166.6666666666665151"/>
+						<BehaviourDouble name="BehaviourDouble">
+							<PhaseSourceTimeline name="PhaseSourceTimeline" globalSpeedEnabled="1">
+								<Params name="Params">
+									<ParamRange storage="3" name="Beats" default="4" value="4"/>
+									<ParamRange storage="3" name="BPM" default="110.7692307692307736" value="110.7692307692307736"/>
+									<ParamRange storage="3" name="Speed" default="1" value="1"/>
+									<ParamChoice storage="3" name="Syncmode" default="0" value="0" storeChoices="0"/>
+									<ParamChoice storage="3" name="PlayDirection" default="1" value="1" storeChoices="0"/>
+									<ParamChoice storage="3" name="PlayMode" default="0" value="2" storeChoices="0"/>
+									<ParamChoice storage="3" name="PlayModeAway" default="0" value="0" storeChoices="0"/>
+									<Param storage="3" name="Finished" default="0" value="0"/>
+								</Params>
+								<ParamBasedDuration name="ParamBasedDuration"/>
+								<Beats_double name="Beats_double" mode="0" numDetectedBeats="-1" numManualBeats="4" detectedTempo="-1" manualTempo="110.7692307692307736" detected="0"/>
+							</PhaseSourceTimeline>
+						</BehaviourDouble>
+					</ParamRange>
+				</Params>
+			</Transport>
+			<ClipView name="ClipView">
+				<FoldParams name="FoldParams"/>
+			</ClipView>
+			<VideoTrack name="VideoTrack" manualDuration="0">
+				<Params name="Params">
+					<ParamRange storage="3" name="Width" default="1600" value="1600"/>
+					<ParamRange storage="3" name="Height" default="1600" value="1600"/>
+					<Param storage="3" name="RScale" default="1" value="1"/>
+					<Param storage="3" name="GScale" default="1" value="1"/>
+					<Param storage="3" name="BScale" default="1" value="1"/>
+					<Param storage="3" name="AScale" default="1" value="1"/>
+				</Params>
+				<RenderPass name="RenderPassChain" type="RenderPassChain" uniqueId="RenderPassChain" baseType="RenderPassChain">
+					<RenderPass storage="0" name="Transform" type="TransformEffect" uniqueId="17122039101699797593" baseType="Effect" index="0">
+						<Params name="Params">
+							<ParamRange name="Scale" default="100" value="57.877813504823151902"/>
+						</Params>
+						<View name="View" bCanBeDisabled="0" bCanBeRemoved="0"/>
+					</RenderPass>
+				</RenderPass>
+				<ChoosableMixer name="Blend"/>
+				<PrimarySource>
+					<VideoSource name="VideoSource" width="1600" height="1600" type="VideoFormatReaderSource">
+						<RenderPass name="RenderPassChain" type="RenderPassChain" uniqueId="RenderPassChain" baseType="RenderPassChain"/>
+						<VideoFormatReaderSource fileName="D:\git\tt.interaction\tt_interaction_rplidar_position_10_mountains\resolume\data\3mstm.mov" LoadingThread="TTM_THREADED"/>
+					</VideoSource>
+				</PrimarySource>
+			</VideoTrack>
+		</Clip>
+		<Clip name="Clip" uniqueId="1542795854609" layerIndex="6" columnIndex="0">
+			<Params name="Params">
+				<Param storage="3" name="Name" default="3mtm" value="3mtm"/>
+				<ParamChoice storage="3" name="TransportType" default="0" value="1" storeChoices="0"/>
+				<ParamChoice name="Beat Snap" default="0" value="1" storeChoices="0"/>
+			</Params>
+			<Transport name="Transport">
+				<Params name="Params">
+					<ParamRange name="Position" default="0" value="770.00000000061208993">
+						<ValueRange name="minMax" min="0" max="8000"/>
+						<ValueRange name="startStop" min="0" max="8000"/>
+						<BehaviourDouble name="BehaviourDouble">
+							<PhaseSourceBPMBeatloopr name="PhaseSourceBPMBeatloopr" globalSpeedEnabled="1">
+								<Params name="Params">
+									<ParamRange storage="3" name="Beats" default="16" value="16"/>
+									<ParamRange storage="3" name="BPM" default="120" value="120"/>
+									<ParamRange storage="3" name="Speed" default="1" value="1"/>
+									<ParamChoice storage="3" name="Syncmode" default="0" value="1" storeChoices="0"/>
+									<ParamChoice storage="3" name="PlayDirection" default="1" value="1" storeChoices="0"/>
+									<ParamChoice storage="3" name="PlayMode" default="0" value="2" storeChoices="0"/>
+									<ParamChoice storage="3" name="PlayModeAway" default="0" value="0" storeChoices="0"/>
+									<Param storage="3" name="Finished" default="0" value="0"/>
+									<ParamChoice storage="3" name="BeatLoop" default="-1" value="-1" storeChoices="0"/>
+									<Param storage="3" name="Catchup" default="0" value="0"/>
+								</Params>
+								<ParamBasedDuration name="ParamBasedDuration"/>
+								<Beats_double name="Beats_double" mode="0" numDetectedBeats="-1" numManualBeats="16" detectedTempo="-1" manualTempo="120" detected="0"/>
+							</PhaseSourceBPMBeatloopr>
+						</BehaviourDouble>
+					</ParamRange>
+				</Params>
+			</Transport>
+			<ClipView name="ClipView">
+				<FoldParams name="FoldParams"/>
+			</ClipView>
+			<AudioTrack name="AudioTrack">
+				<AudioEffectChain name="AudioEffectChain"/>
+				<PrimarySource>
+					<AudioFileSource FileName="D:\git\tt.interaction\tt_interaction_rplidar_position_10_mountains\sound\3mtm.wav"/>
+				</PrimarySource>
+			</AudioTrack>
+		</Clip>
+		<Clip name="Clip" uniqueId="1541836880824" layerIndex="7" columnIndex="0">
+			<PreloadData>
+				<VideoFile value="D:\git\tt.interaction\tt_interaction_rplidar_position_10_mountains\resolume\data\4mstm.mov"/>
+			</PreloadData>
+			<Params name="Params">
+				<Param storage="3" name="Name" default="4mstm" value="4mstm"/>
+				<ParamChoice storage="3" name="TransportType" default="0" value="0" storeChoices="0"/>
+			</Params>
+			<Transport name="Transport">
+				<Params name="Params">
+					<ParamRange name="Position" default="0" value="4458.3333333333330302">
+						<ValueRange name="minMax" min="0" max="4458.3333333333330302"/>
+						<ValueRange name="startStop" min="0" max="4458.3333333333330302"/>
+						<BehaviourDouble name="BehaviourDouble">
+							<PhaseSourceTimeline name="PhaseSourceTimeline" globalSpeedEnabled="1">
+								<Params name="Params">
+									<ParamRange storage="3" name="Beats" default="8" value="8"/>
+									<ParamRange storage="3" name="BPM" default="107.66355140186917083" value="107.66355140186917083"/>
+									<ParamRange storage="3" name="Speed" default="1" value="1"/>
+									<ParamChoice storage="3" name="Syncmode" default="0" value="0" storeChoices="0"/>
+									<ParamChoice storage="3" name="PlayDirection" default="1" value="1" storeChoices="0"/>
+									<ParamChoice storage="3" name="PlayMode" default="0" value="2" storeChoices="0"/>
+									<ParamChoice storage="3" name="PlayModeAway" default="0" value="0" storeChoices="0"/>
+									<Param storage="3" name="Finished" default="0" value="128"/>
+								</Params>
+								<ParamBasedDuration name="ParamBasedDuration"/>
+								<Beats_double name="Beats_double" mode="0" numDetectedBeats="-1" numManualBeats="8" detectedTempo="-1" manualTempo="107.66355140186917083" detected="0"/>
+							</PhaseSourceTimeline>
+						</BehaviourDouble>
+					</ParamRange>
+				</Params>
+			</Transport>
+			<ClipView name="ClipView">
+				<FoldParams name="FoldParams"/>
+			</ClipView>
+			<VideoTrack name="VideoTrack" manualDuration="0">
+				<Params name="Params">
+					<ParamRange storage="3" name="Width" default="1600" value="1600"/>
+					<ParamRange storage="3" name="Height" default="1600" value="1600"/>
+					<Param storage="3" name="RScale" default="1" value="1"/>
+					<Param storage="3" name="GScale" default="1" value="1"/>
+					<Param storage="3" name="BScale" default="1" value="1"/>
+					<Param storage="3" name="AScale" default="1" value="1"/>
+				</Params>
+				<RenderPass name="RenderPassChain" type="RenderPassChain" uniqueId="RenderPassChain" baseType="RenderPassChain">
+					<RenderPass storage="0" name="Transform" type="TransformEffect" uniqueId="17122039101699797593" baseType="Effect" index="0">
+						<Params name="Params">
+							<ParamRange name="Scale" default="100" value="67.524115755627008184"/>
+						</Params>
+						<View name="View" bCanBeDisabled="0" bCanBeRemoved="0"/>
+					</RenderPass>
+				</RenderPass>
+				<ChoosableMixer name="Blend"/>
+				<PrimarySource>
+					<VideoSource name="VideoSource" width="1600" height="1600" type="VideoFormatReaderSource">
+						<RenderPass name="RenderPassChain" type="RenderPassChain" uniqueId="RenderPassChain" baseType="RenderPassChain"/>
+						<VideoFormatReaderSource fileName="D:\git\tt.interaction\tt_interaction_rplidar_position_10_mountains\resolume\data\4mstm.mov" LoadingThread="TTM_THREADED"/>
+					</VideoSource>
+				</PrimarySource>
+			</VideoTrack>
+		</Clip>
+		<Clip name="Clip" uniqueId="1541836881086" layerIndex="8" columnIndex="0">
+			<Params name="Params">
+				<Param storage="3" name="Name" default="4mtm" value="4mtm"/>
+				<ParamChoice storage="3" name="TransportType" default="0" value="1" storeChoices="0"/>
+			</Params>
+			<Transport name="Transport">
+				<Params name="Params">
+					<ParamRange name="Position" default="0" value="8019.8412698412694226">
+						<ValueRange name="minMax" min="0" max="8019.8412698412694226"/>
+						<ValueRange name="startStop" min="0" max="8019.8412698412694226"/>
+						<BehaviourDouble name="BehaviourDouble">
+							<PhaseSourceBPMBeatloopr name="PhaseSourceBPMBeatloopr" globalSpeedEnabled="1">
+								<Params name="Params">
+									<ParamRange storage="3" name="Beats" default="16" value="16"/>
+									<ParamRange storage="3" name="BPM" default="119.70311726867888069" value="120"/>
+									<ParamRange storage="3" name="Speed" default="1" value="1"/>
+									<ParamChoice storage="3" name="Syncmode" default="0" value="1" storeChoices="0"/>
+									<ParamChoice storage="3" name="PlayDirection" default="1" value="1" storeChoices="0"/>
+									<ParamChoice storage="3" name="PlayMode" default="0" value="2" storeChoices="0"/>
+									<ParamChoice storage="3" name="PlayModeAway" default="0" value="0" storeChoices="0"/>
+									<Param storage="3" name="Finished" default="0" value="128"/>
+									<ParamChoice storage="3" name="BeatLoop" default="-1" value="-1" storeChoices="0"/>
+									<Param storage="3" name="Catchup" default="0" value="0"/>
+								</Params>
+								<ParamBasedDuration name="ParamBasedDuration"/>
+								<Beats_double name="Beats_double" mode="0" numDetectedBeats="-1" numManualBeats="16" detectedTempo="-1" manualTempo="119.70311726867888069" detected="0"/>
+							</PhaseSourceBPMBeatloopr>
+						</BehaviourDouble>
+					</ParamRange>
+				</Params>
+			</Transport>
+			<ClipView name="ClipView">
+				<FoldParams name="FoldParams"/>
+			</ClipView>
+			<AudioTrack name="AudioTrack">
+				<AudioEffectChain name="AudioEffectChain"/>
+				<PrimarySource>
+					<AudioFileSource FileName="D:\git\tt.interaction\tt_interaction_rplidar_position_10_mountains\sound\4mtm.wav"/>
+				</PrimarySource>
+			</AudioTrack>
+		</Clip>
+		<Clip name="Clip" uniqueId="1541836880833" layerIndex="9" columnIndex="0">
+			<PreloadData>
+				<VideoFile value="E:\tt_interaction\tt_interaction_rplidar_position_10_mountains\resolume\data\5mstm.mov"/>
+			</PreloadData>
+			<Params name="Params">
+				<Param storage="3" name="Name" default="5mstm" value="5mstm"/>
+				<ParamChoice storage="3" name="TransportType" default="0" value="0" storeChoices="0"/>
+			</Params>
+			<Transport name="Transport">
+				<Params name="Params">
+					<ParamRange name="Position" default="0" value="2958.3333333333330302">
+						<ValueRange name="minMax" min="0" max="2958.3333333333330302"/>
+						<ValueRange name="startStop" min="0" max="2958.3333333333330302"/>
+						<BehaviourDouble name="BehaviourDouble">
+							<PhaseSourceTimeline name="PhaseSourceTimeline" globalSpeedEnabled="1">
+								<Params name="Params">
+									<ParamRange storage="3" name="Beats" default="4" value="4"/>
+									<ParamRange storage="3" name="BPM" default="81.126760563380287294" value="81.126760563380287294"/>
+									<ParamRange storage="3" name="Speed" default="1" value="1.0000000944816660464"/>
+									<ParamChoice storage="3" name="Syncmode" default="0" value="0" storeChoices="0"/>
+									<ParamChoice storage="3" name="PlayDirection" default="1" value="1" storeChoices="0"/>
+									<ParamChoice storage="3" name="PlayMode" default="0" value="2" storeChoices="0"/>
+									<ParamChoice storage="3" name="PlayModeAway" default="0" value="0" storeChoices="0"/>
+									<Param storage="3" name="Finished" default="0" value="128"/>
+								</Params>
+								<ParamBasedDuration name="ParamBasedDuration"/>
+								<Beats_double name="Beats_double" mode="0" numDetectedBeats="-1" numManualBeats="4" detectedTempo="-1" manualTempo="81.126760563380287294" detected="0"/>
+							</PhaseSourceTimeline>
+						</BehaviourDouble>
+					</ParamRange>
+				</Params>
+			</Transport>
+			<ClipView name="ClipView">
+				<FoldParams name="FoldParams"/>
+			</ClipView>
+			<VideoTrack name="VideoTrack" manualDuration="0">
+				<Params name="Params">
+					<ParamRange storage="3" name="Width" default="1600" value="1600"/>
+					<ParamRange storage="3" name="Height" default="2000" value="2000"/>
+					<Param storage="3" name="RScale" default="1" value="1"/>
+					<Param storage="3" name="GScale" default="1" value="1"/>
+					<Param storage="3" name="BScale" default="1" value="1"/>
+					<Param storage="3" name="AScale" default="1" value="1"/>
+				</Params>
+				<RenderPass name="RenderPassChain" type="RenderPassChain" uniqueId="RenderPassChain" baseType="RenderPassChain">
+					<RenderPass storage="0" name="Transform" type="TransformEffect" uniqueId="17122039101699797593" baseType="Effect" index="0">
+						<Params name="Params">
+							<ParamRange name="Scale" default="100" value="53.662379421221864106"/>
+						</Params>
+						<View name="View" bCanBeDisabled="0" bCanBeRemoved="0"/>
+					</RenderPass>
+				</RenderPass>
+				<ChoosableMixer name="Blend"/>
+				<PrimarySource>
+					<VideoSource name="VideoSource" width="1600" height="2000" type="VideoFormatReaderSource">
+						<RenderPass name="RenderPassChain" type="RenderPassChain" uniqueId="RenderPassChain" baseType="RenderPassChain"/>
+						<VideoFormatReaderSource fileName="E:\tt_interaction\tt_interaction_rplidar_position_10_mountains\resolume\data\5mstm.mov" LoadingThread="TTM_THREADED"/>
+					</VideoSource>
+				</PrimarySource>
+			</VideoTrack>
+		</Clip>
+		<Clip name="Clip" uniqueId="1541836881095" layerIndex="10" columnIndex="0">
+			<Params name="Params">
+				<Param storage="3" name="Name" default="Beat 003" value="Beat 003"/>
+				<ParamChoice storage="3" name="TransportType" default="0" value="0" storeChoices="0"/>
+			</Params>
+			<Transport name="Transport">
+				<Params name="Params">
+					<ParamRange name="Position" default="0" value="7500">
+						<ValueRange name="minMax" min="0" max="7500"/>
+						<ValueRange name="startStop" min="0" max="7500"/>
+						<BehaviourDouble name="BehaviourDouble">
+							<PhaseSourceTimeline name="PhaseSourceTimeline" globalSpeedEnabled="1">
+								<Params name="Params">
+									<ParamRange storage="3" name="Beats" default="16" value="16"/>
+									<ParamRange storage="3" name="BPM" default="128" value="128"/>
+									<ParamRange storage="3" name="Speed" default="1" value="1"/>
+									<ParamChoice storage="3" name="Syncmode" default="0" value="0" storeChoices="0"/>
+									<ParamChoice storage="3" name="PlayDirection" default="1" value="1" storeChoices="0"/>
+									<ParamChoice storage="3" name="PlayMode" default="0" value="2" storeChoices="0"/>
+									<ParamChoice storage="3" name="PlayModeAway" default="0" value="0" storeChoices="0"/>
+									<Param storage="3" name="Finished" default="0" value="128"/>
+								</Params>
+								<ParamBasedDuration name="ParamBasedDuration"/>
+								<Beats_double name="Beats_double" mode="0" numDetectedBeats="-1" numManualBeats="16" detectedTempo="-1" manualTempo="128" detected="0"/>
+							</PhaseSourceTimeline>
+						</BehaviourDouble>
+					</ParamRange>
+				</Params>
+			</Transport>
+			<ClipView name="ClipView">
+				<FoldParams name="FoldParams"/>
+			</ClipView>
+			<AudioTrack name="AudioTrack">
+				<AudioEffectChain name="AudioEffectChain"/>
+				<PrimarySource>
+					<AudioFileSource FileName="C:\Program Files\Resolume Arena 6\media\AV\Beat 003.wav"/>
+				</PrimarySource>
+			</AudioTrack>
+		</Clip>
+		<Clip name="Clip" uniqueId="1541836880842" layerIndex="11" columnIndex="0">
+			<PreloadData>
+				<VideoFile value="E:\tt_interaction\tt_interaction_rplidar_position_10_mountains\resolume\data\6mstm.mov"/>
+			</PreloadData>
+			<Params name="Params">
+				<Param storage="3" name="Name" default="6mstm" value="6mstm"/>
+				<ParamChoice storage="3" name="TransportType" default="0" value="0" storeChoices="0"/>
+			</Params>
+			<Transport name="Transport">
+				<Params name="Params">
+					<ParamRange name="Position" default="0" value="4208.3333333333330302">
+						<ValueRange name="minMax" min="0" max="4208.3333333333330302"/>
+						<ValueRange name="startStop" min="0" max="4208.3333333333330302"/>
+						<BehaviourDouble name="BehaviourDouble">
+							<PhaseSourceTimeline name="PhaseSourceTimeline" globalSpeedEnabled="1">
+								<Params name="Params">
+									<ParamRange storage="3" name="Beats" default="8" value="8"/>
+									<ParamRange storage="3" name="BPM" default="114.05940594059406124" value="114.05940594059406124"/>
+									<ParamRange storage="3" name="Speed" default="1" value="1"/>
+									<ParamChoice storage="3" name="Syncmode" default="0" value="0" storeChoices="0"/>
+									<ParamChoice storage="3" name="PlayDirection" default="1" value="1" storeChoices="0"/>
+									<ParamChoice storage="3" name="PlayMode" default="0" value="2" storeChoices="0"/>
+									<ParamChoice storage="3" name="PlayModeAway" default="0" value="0" storeChoices="0"/>
+									<Param storage="3" name="Finished" default="0" value="128"/>
+								</Params>
+								<ParamBasedDuration name="ParamBasedDuration"/>
+								<Beats_double name="Beats_double" mode="0" numDetectedBeats="-1" numManualBeats="8" detectedTempo="-1" manualTempo="114.05940594059406124" detected="0"/>
+							</PhaseSourceTimeline>
+						</BehaviourDouble>
+					</ParamRange>
+				</Params>
+			</Transport>
+			<ClipView name="ClipView">
+				<FoldParams name="FoldParams"/>
+			</ClipView>
+			<VideoTrack name="VideoTrack" manualDuration="0">
+				<Params name="Params">
+					<ParamRange storage="3" name="Width" default="1600" value="1600"/>
+					<ParamRange storage="3" name="Height" default="1800" value="1800"/>
+					<Param storage="3" name="RScale" default="1" value="1"/>
+					<Param storage="3" name="GScale" default="1" value="1"/>
+					<Param storage="3" name="BScale" default="1" value="1"/>
+					<Param storage="3" name="AScale" default="1" value="1"/>
+				</Params>
+				<RenderPass name="RenderPassChain" type="RenderPassChain" uniqueId="RenderPassChain" baseType="RenderPassChain">
+					<RenderPass storage="0" name="Transform" type="TransformEffect" uniqueId="17122039101699797593" baseType="Effect" index="0">
+						<Params name="Params">
+							<ParamRange name="Scale" default="100" value="51.446945337620576311"/>
+						</Params>
+						<View name="View" bCanBeDisabled="0" bCanBeRemoved="0"/>
+					</RenderPass>
+				</RenderPass>
+				<ChoosableMixer name="Blend"/>
+				<PrimarySource>
+					<VideoSource name="VideoSource" width="1600" height="1800" type="VideoFormatReaderSource">
+						<RenderPass name="RenderPassChain" type="RenderPassChain" uniqueId="RenderPassChain" baseType="RenderPassChain"/>
+						<VideoFormatReaderSource fileName="E:\tt_interaction\tt_interaction_rplidar_position_10_mountains\resolume\data\6mstm.mov" LoadingThread="TTM_THREADED"/>
+					</VideoSource>
+				</PrimarySource>
+			</VideoTrack>
+		</Clip>
+		<Clip name="Clip" uniqueId="1541836881104" layerIndex="12" columnIndex="0">
+			<Params name="Params">
+				<Param storage="3" name="Name" default="Beat 004" value="Beat 004"/>
+				<ParamChoice storage="3" name="TransportType" default="0" value="0" storeChoices="0"/>
+			</Params>
+			<Transport name="Transport">
+				<Params name="Params">
+					<ParamRange name="Position" default="0" value="7500">
+						<ValueRange name="minMax" min="0" max="7500"/>
+						<ValueRange name="startStop" min="0" max="7500"/>
+						<BehaviourDouble name="BehaviourDouble">
+							<PhaseSourceTimeline name="PhaseSourceTimeline" globalSpeedEnabled="1">
+								<Params name="Params">
+									<ParamRange storage="3" name="Beats" default="16" value="16"/>
+									<ParamRange storage="3" name="BPM" default="128" value="128"/>
+									<ParamRange storage="3" name="Speed" default="1" value="1"/>
+									<ParamChoice storage="3" name="Syncmode" default="0" value="0" storeChoices="0"/>
+									<ParamChoice storage="3" name="PlayDirection" default="1" value="1" storeChoices="0"/>
+									<ParamChoice storage="3" name="PlayMode" default="0" value="2" storeChoices="0"/>
+									<ParamChoice storage="3" name="PlayModeAway" default="0" value="0" storeChoices="0"/>
+									<Param storage="3" name="Finished" default="0" value="128"/>
+								</Params>
+								<ParamBasedDuration name="ParamBasedDuration"/>
+								<Beats_double name="Beats_double" mode="0" numDetectedBeats="-1" numManualBeats="16" detectedTempo="-1" manualTempo="128" detected="0"/>
+							</PhaseSourceTimeline>
+						</BehaviourDouble>
+					</ParamRange>
+				</Params>
+			</Transport>
+			<ClipView name="ClipView">
+				<FoldParams name="FoldParams"/>
+			</ClipView>
+			<AudioTrack name="AudioTrack">
+				<AudioEffectChain name="AudioEffectChain"/>
+				<PrimarySource>
+					<AudioFileSource FileName="C:\Program Files\Resolume Arena 6\media\AV\Beat 004.wav"/>
+				</PrimarySource>
+			</AudioTrack>
+		</Clip>
+		<Clip name="Clip" uniqueId="1541836880851" layerIndex="13" columnIndex="0">
+			<PreloadData>
+				<VideoFile value="E:\tt_interaction\tt_interaction_rplidar_position_10_mountains\resolume\data\7mstm.mov"/>
+			</PreloadData>
+			<Params name="Params">
+				<Param storage="3" name="Name" default="7mstm" value="7mstm"/>
+				<ParamChoice storage="3" name="TransportType" default="0" value="0" storeChoices="0"/>
+			</Params>
+			<Transport name="Transport">
+				<Params name="Params">
+					<ParamRange name="Position" default="0" value="3625">
+						<ValueRange name="minMax" min="0" max="3625"/>
+						<ValueRange name="startStop" min="0" max="3625"/>
+						<BehaviourDouble name="BehaviourDouble">
+							<PhaseSourceTimeline name="PhaseSourceTimeline" globalSpeedEnabled="1">
+								<Params name="Params">
+									<ParamRange storage="3" name="Beats" default="8" value="8"/>
+									<ParamRange storage="3" name="BPM" default="132.41379310344828468" value="132.41379310344828468"/>
+									<ParamRange storage="3" name="Speed" default="1" value="1"/>
+									<ParamChoice storage="3" name="Syncmode" default="0" value="0" storeChoices="0"/>
+									<ParamChoice storage="3" name="PlayDirection" default="1" value="1" storeChoices="0"/>
+									<ParamChoice storage="3" name="PlayMode" default="0" value="2" storeChoices="0"/>
+									<ParamChoice storage="3" name="PlayModeAway" default="0" value="0" storeChoices="0"/>
+									<Param storage="3" name="Finished" default="0" value="128"/>
+								</Params>
+								<ParamBasedDuration name="ParamBasedDuration"/>
+								<Beats_double name="Beats_double" mode="0" numDetectedBeats="-1" numManualBeats="8" detectedTempo="-1" manualTempo="132.41379310344828468" detected="0"/>
+							</PhaseSourceTimeline>
+						</BehaviourDouble>
+					</ParamRange>
+				</Params>
+			</Transport>
+			<ClipView name="ClipView">
+				<FoldParams name="FoldParams"/>
+			</ClipView>
+			<VideoTrack name="VideoTrack" manualDuration="0">
+				<Params name="Params">
+					<ParamRange storage="3" name="Width" default="1600" value="1600"/>
+					<ParamRange storage="3" name="Height" default="1600" value="1600"/>
+					<Param storage="3" name="RScale" default="1" value="1"/>
+					<Param storage="3" name="GScale" default="1" value="1"/>
+					<Param storage="3" name="BScale" default="1" value="1"/>
+					<Param storage="3" name="AScale" default="1" value="1"/>
+				</Params>
+				<RenderPass name="RenderPassChain" type="RenderPassChain" uniqueId="RenderPassChain" baseType="RenderPassChain">
+					<RenderPass storage="0" name="Transform" type="TransformEffect" uniqueId="17122039101699797593" baseType="Effect" index="0">
+						<Params name="Params">
+							<ParamRange name="Scale" default="100" value="70.739549839228303085"/>
+						</Params>
+						<View name="View" bCanBeDisabled="0" bCanBeRemoved="0"/>
+					</RenderPass>
+				</RenderPass>
+				<ChoosableMixer name="Blend"/>
+				<PrimarySource>
+					<VideoSource name="VideoSource" width="1600" height="1600" type="VideoFormatReaderSource">
+						<RenderPass name="RenderPassChain" type="RenderPassChain" uniqueId="RenderPassChain" baseType="RenderPassChain"/>
+						<VideoFormatReaderSource fileName="E:\tt_interaction\tt_interaction_rplidar_position_10_mountains\resolume\data\7mstm.mov" LoadingThread="TTM_THREADED"/>
+					</VideoSource>
+				</PrimarySource>
+			</VideoTrack>
+		</Clip>
+		<Clip name="Clip" uniqueId="1541836881113" layerIndex="14" columnIndex="0">
+			<Params name="Params">
+				<Param storage="3" name="Name" default="Beat 005" value="Beat 005"/>
+				<ParamChoice storage="3" name="TransportType" default="0" value="0" storeChoices="0"/>
+			</Params>
+			<Transport name="Transport">
+				<Params name="Params">
+					<ParamRange name="Position" default="0" value="7500">
+						<ValueRange name="minMax" min="0" max="7500"/>
+						<ValueRange name="startStop" min="0" max="7500"/>
+						<BehaviourDouble name="BehaviourDouble">
+							<PhaseSourceTimeline name="PhaseSourceTimeline" globalSpeedEnabled="1">
+								<Params name="Params">
+									<ParamRange storage="3" name="Beats" default="16" value="16"/>
+									<ParamRange storage="3" name="BPM" default="128" value="128"/>
+									<ParamRange storage="3" name="Speed" default="1" value="1"/>
+									<ParamChoice storage="3" name="Syncmode" default="0" value="0" storeChoices="0"/>
+									<ParamChoice storage="3" name="PlayDirection" default="1" value="1" storeChoices="0"/>
+									<ParamChoice storage="3" name="PlayMode" default="0" value="2" storeChoices="0"/>
+									<ParamChoice storage="3" name="PlayModeAway" default="0" value="0" storeChoices="0"/>
+									<Param storage="3" name="Finished" default="0" value="128"/>
+								</Params>
+								<ParamBasedDuration name="ParamBasedDuration"/>
+								<Beats_double name="Beats_double" mode="0" numDetectedBeats="-1" numManualBeats="16" detectedTempo="-1" manualTempo="128" detected="0"/>
+							</PhaseSourceTimeline>
+						</BehaviourDouble>
+					</ParamRange>
+				</Params>
+			</Transport>
+			<ClipView name="ClipView">
+				<FoldParams name="FoldParams"/>
+			</ClipView>
+			<AudioTrack name="AudioTrack">
+				<AudioEffectChain name="AudioEffectChain"/>
+				<PrimarySource>
+					<AudioFileSource FileName="C:\Program Files\Resolume Arena 6\media\AV\Beat 005.wav"/>
+				</PrimarySource>
+			</AudioTrack>
+		</Clip>
+		<Clip name="Clip" uniqueId="1541925508229" layerIndex="15" columnIndex="0">
+			<PreloadData>
+				<VideoFile value="E:\tt_interaction\tt_interaction_rplidar_position_10_mountains\resolume\data\8mstm.mov"/>
+			</PreloadData>
+			<Params name="Params">
+				<Param storage="3" name="Name" default="8mstm" value="8mstm"/>
+				<ParamChoice storage="3" name="TransportType" default="0" value="0" storeChoices="0"/>
+			</Params>
+			<Transport name="Transport">
+				<Params name="Params">
+					<ParamRange name="Position" default="0" value="2815.1532389313088061">
+						<ValueRange name="minMax" min="0" max="4166.6666666666660603"/>
+						<ValueRange name="startStop" min="0" max="4166.6666666666660603"/>
+						<BehaviourDouble name="BehaviourDouble">
+							<PhaseSourceTimeline name="PhaseSourceTimeline" globalSpeedEnabled="1">
+								<Params name="Params">
+									<ParamRange storage="3" name="Beats" default="8" value="8"/>
+									<ParamRange storage="3" name="BPM" default="115.20000000000001705" value="115.20000000000001705"/>
+									<ParamRange storage="3" name="Speed" default="1" value="1"/>
+									<ParamChoice storage="3" name="Syncmode" default="0" value="0" storeChoices="0"/>
+									<ParamChoice storage="3" name="PlayDirection" default="1" value="1" storeChoices="0"/>
+									<ParamChoice storage="3" name="PlayMode" default="0" value="0" storeChoices="0"/>
+									<ParamChoice storage="3" name="PlayModeAway" default="0" value="0" storeChoices="0"/>
+									<Param storage="3" name="Finished" default="0" value="0"/>
+								</Params>
+								<ParamBasedDuration name="ParamBasedDuration"/>
+								<Beats_double name="Beats_double" mode="0" numDetectedBeats="-1" numManualBeats="8" detectedTempo="-1" manualTempo="115.20000000000001705" detected="0"/>
+							</PhaseSourceTimeline>
+						</BehaviourDouble>
+					</ParamRange>
+				</Params>
+			</Transport>
+			<ClipView name="ClipView">
+				<FoldParams name="FoldParams"/>
+			</ClipView>
+			<VideoTrack name="VideoTrack" manualDuration="0">
+				<Params name="Params">
+					<ParamRange storage="3" name="Width" default="1600" value="1600"/>
+					<ParamRange storage="3" name="Height" default="1600" value="1600"/>
+					<Param storage="3" name="RScale" default="1" value="1"/>
+					<Param storage="3" name="GScale" default="1" value="1"/>
+					<Param storage="3" name="BScale" default="1" value="1"/>
+					<Param storage="3" name="AScale" default="1" value="1"/>
+				</Params>
+				<RenderPass name="RenderPassChain" type="RenderPassChain" uniqueId="RenderPassChain" baseType="RenderPassChain">
+					<RenderPass storage="0" name="Transform" type="TransformEffect" uniqueId="17122039101699797593" baseType="Effect" index="0">
+						<View name="View" bCanBeDisabled="0" bCanBeRemoved="0"/>
+					</RenderPass>
+				</RenderPass>
+				<ChoosableMixer name="Blend"/>
+				<PrimarySource>
+					<VideoSource name="VideoSource" width="1600" height="1600" type="VideoFormatReaderSource">
+						<RenderPass name="RenderPassChain" type="RenderPassChain" uniqueId="RenderPassChain" baseType="RenderPassChain"/>
+						<VideoFormatReaderSource fileName="E:\tt_interaction\tt_interaction_rplidar_position_10_mountains\resolume\data\8mstm.mov" LoadingThread="TTM_THREADED"/>
+					</VideoSource>
+				</PrimarySource>
+			</VideoTrack>
+		</Clip>
+		<Clip name="Clip" uniqueId="1541836880869" layerIndex="17" columnIndex="0">
+			<PreloadData>
+				<VideoFile value="E:\tt_interaction\tt_interaction_rplidar_position_10_mountains\resolume\data\9mstm.mov"/>
+			</PreloadData>
+			<Params name="Params">
+				<Param storage="3" name="Name" default="9mstm" value="9mstm"/>
+				<ParamChoice storage="3" name="TransportType" default="0" value="0" storeChoices="0"/>
+			</Params>
+			<Transport name="Transport">
+				<Params name="Params">
+					<ParamRange name="Position" default="0" value="6725.3486763698456343">
+						<ValueRange name="minMax" min="0" max="10416.66666666666606"/>
+						<ValueRange name="startStop" min="0" max="10416.66666666666606"/>
+						<BehaviourDouble name="BehaviourDouble">
+							<PhaseSourceTimeline name="PhaseSourceTimeline" globalSpeedEnabled="1">
+								<Params name="Params">
+									<ParamRange storage="3" name="Beats" default="16" value="16"/>
+									<ParamRange storage="3" name="BPM" default="92.1600000000000108" value="92.1600000000000108"/>
+									<ParamRange storage="3" name="Speed" default="1" value="1"/>
+									<ParamChoice storage="3" name="Syncmode" default="0" value="0" storeChoices="0"/>
+									<ParamChoice storage="3" name="PlayDirection" default="1" value="1" storeChoices="0"/>
+									<ParamChoice storage="3" name="PlayMode" default="0" value="2" storeChoices="0"/>
+									<ParamChoice storage="3" name="PlayModeAway" default="0" value="0" storeChoices="0"/>
+									<Param storage="3" name="Finished" default="0" value="0"/>
+								</Params>
+								<ParamBasedDuration name="ParamBasedDuration"/>
+								<Beats_double name="Beats_double" mode="0" numDetectedBeats="-1" numManualBeats="16" detectedTempo="-1" manualTempo="92.1600000000000108" detected="0"/>
+							</PhaseSourceTimeline>
+						</BehaviourDouble>
+					</ParamRange>
+				</Params>
+			</Transport>
+			<ClipView name="ClipView">
+				<FoldParams name="FoldParams"/>
+			</ClipView>
+			<VideoTrack name="VideoTrack" manualDuration="0">
+				<Params name="Params">
+					<ParamRange storage="3" name="Width" default="1600" value="1600"/>
+					<ParamRange storage="3" name="Height" default="1600" value="1600"/>
+					<Param storage="3" name="RScale" default="1" value="1"/>
+					<Param storage="3" name="GScale" default="1" value="1"/>
+					<Param storage="3" name="BScale" default="1" value="1"/>
+					<Param storage="3" name="AScale" default="1" value="1"/>
+				</Params>
+				<RenderPass name="RenderPassChain" type="RenderPassChain" uniqueId="RenderPassChain" baseType="RenderPassChain">
+					<RenderPass storage="0" name="Transform" type="TransformEffect" uniqueId="17122039101699797593" baseType="Effect" index="0">
+						<Params name="Params">
+							<ParamRange name="Scale" default="100" value="54.662379421221864106"/>
+						</Params>
+						<View name="View" bCanBeDisabled="0" bCanBeRemoved="0"/>
+					</RenderPass>
+				</RenderPass>
+				<ChoosableMixer name="Blend"/>
+				<PrimarySource>
+					<VideoSource name="VideoSource" width="1600" height="1600" type="VideoFormatReaderSource">
+						<RenderPass name="RenderPassChain" type="RenderPassChain" uniqueId="RenderPassChain" baseType="RenderPassChain"/>
+						<VideoFormatReaderSource fileName="E:\tt_interaction\tt_interaction_rplidar_position_10_mountains\resolume\data\9mstm.mov" LoadingThread="TTM_THREADED"/>
+					</VideoSource>
+				</PrimarySource>
+			</VideoTrack>
+		</Clip>
+		<Clip name="Clip" uniqueId="1541836881131" layerIndex="18" columnIndex="0">
+			<Params name="Params">
+				<Param storage="3" name="Name" default="Beat 006" value="Beat 006"/>
+				<ParamChoice storage="3" name="TransportType" default="0" value="0" storeChoices="0"/>
+			</Params>
+			<Transport name="Transport">
+				<Params name="Params">
+					<ParamRange name="Position" default="0" value="7500">
+						<ValueRange name="minMax" min="0" max="7500"/>
+						<ValueRange name="startStop" min="0" max="7500"/>
+						<BehaviourDouble name="BehaviourDouble">
+							<PhaseSourceTimeline name="PhaseSourceTimeline" globalSpeedEnabled="1">
+								<Params name="Params">
+									<ParamRange storage="3" name="Beats" default="16" value="16"/>
+									<ParamRange storage="3" name="BPM" default="128" value="128"/>
+									<ParamRange storage="3" name="Speed" default="1" value="1"/>
+									<ParamChoice storage="3" name="Syncmode" default="0" value="0" storeChoices="0"/>
+									<ParamChoice storage="3" name="PlayDirection" default="1" value="1" storeChoices="0"/>
+									<ParamChoice storage="3" name="PlayMode" default="0" value="2" storeChoices="0"/>
+									<ParamChoice storage="3" name="PlayModeAway" default="0" value="0" storeChoices="0"/>
+									<Param storage="3" name="Finished" default="0" value="128"/>
+								</Params>
+								<ParamBasedDuration name="ParamBasedDuration"/>
+								<Beats_double name="Beats_double" mode="0" numDetectedBeats="-1" numManualBeats="16" detectedTempo="-1" manualTempo="128" detected="0"/>
+							</PhaseSourceTimeline>
+						</BehaviourDouble>
+					</ParamRange>
+				</Params>
+			</Transport>
+			<ClipView name="ClipView">
+				<FoldParams name="FoldParams"/>
+			</ClipView>
+			<AudioTrack name="AudioTrack">
+				<AudioEffectChain name="AudioEffectChain"/>
+				<PrimarySource>
+					<AudioFileSource FileName="C:\Program Files\Resolume Arena 6\media\AV\Beat 006.wav"/>
+				</PrimarySource>
+			</AudioTrack>
+		</Clip>
+		<Clip name="Clip" uniqueId="1541836881148" layerIndex="19" columnIndex="0">
+			<PreloadData>
+				<VideoFile value="E:\tt_interaction\tt_interaction_rplidar_position_10_mountains\resolume\data\10mstm.mov"/>
+			</PreloadData>
+			<Params name="Params">
+				<Param storage="3" name="Name" default="10mstm" value="10mstm"/>
+				<ParamChoice storage="3" name="TransportType" default="0" value="0" storeChoices="0"/>
+			</Params>
+			<Transport name="Transport">
+				<Params name="Params">
+					<ParamRange name="Position" default="0" value="3766.6666666666669698">
+						<ValueRange name="minMax" min="0" max="3766.6666666666669698"/>
+						<ValueRange name="startStop" min="0" max="3766.6666666666669698"/>
+						<BehaviourDouble name="BehaviourDouble">
+							<PhaseSourceTimeline name="PhaseSourceTimeline" globalSpeedEnabled="1">
+								<Params name="Params">
+									<ParamRange storage="3" name="Beats" default="8" value="8"/>
+									<ParamRange storage="3" name="BPM" default="127.43362831858405571" value="127.43362831858405571"/>
+									<ParamRange storage="3" name="Speed" default="1" value="1"/>
+									<ParamChoice storage="3" name="Syncmode" default="0" value="0" storeChoices="0"/>
+									<ParamChoice storage="3" name="PlayDirection" default="1" value="1" storeChoices="0"/>
+									<ParamChoice storage="3" name="PlayMode" default="0" value="2" storeChoices="0"/>
+									<ParamChoice storage="3" name="PlayModeAway" default="0" value="0" storeChoices="0"/>
+									<Param storage="3" name="Finished" default="0" value="128"/>
+								</Params>
+								<ParamBasedDuration name="ParamBasedDuration"/>
+								<Beats_double name="Beats_double" mode="0" numDetectedBeats="-1" numManualBeats="8" detectedTempo="-1" manualTempo="127.43362831858405571" detected="0"/>
+							</PhaseSourceTimeline>
+						</BehaviourDouble>
+					</ParamRange>
+				</Params>
+			</Transport>
+			<ClipView name="ClipView">
+				<FoldParams name="FoldParams"/>
+			</ClipView>
+			<VideoTrack name="VideoTrack" manualDuration="0">
+				<Params name="Params">
+					<ParamRange storage="3" name="Width" default="1600" value="1600"/>
+					<ParamRange storage="3" name="Height" default="1600" value="1600"/>
+					<Param storage="3" name="RScale" default="1" value="1"/>
+					<Param storage="3" name="GScale" default="1" value="1"/>
+					<Param storage="3" name="BScale" default="1" value="1"/>
+					<Param storage="3" name="AScale" default="1" value="1"/>
+				</Params>
+				<RenderPass name="RenderPassChain" type="RenderPassChain" uniqueId="RenderPassChain" baseType="RenderPassChain">
+					<RenderPass storage="0" name="Transform" type="TransformEffect" uniqueId="17122039101699797593" baseType="Effect" index="0">
+						<Params name="Params">
+							<ParamRange name="Scale" default="100" value="67.524115755627008184"/>
+						</Params>
+						<View name="View" bCanBeDisabled="0" bCanBeRemoved="0"/>
+					</RenderPass>
+				</RenderPass>
+				<ChoosableMixer name="Blend"/>
+				<PrimarySource>
+					<VideoSource name="VideoSource" width="1600" height="1600" type="VideoFormatReaderSource">
+						<RenderPass name="RenderPassChain" type="RenderPassChain" uniqueId="RenderPassChain" baseType="RenderPassChain"/>
+						<VideoFormatReaderSource fileName="E:\tt_interaction\tt_interaction_rplidar_position_10_mountains\resolume\data\10mstm.mov" LoadingThread="TTM_THREADED"/>
+					</VideoSource>
+				</PrimarySource>
+			</VideoTrack>
+		</Clip>
+		<Clip name="Clip" uniqueId="1541836881157" layerIndex="20" columnIndex="0">
+			<Params name="Params">
+				<Param storage="3" name="Name" default="Synth 001" value="Synth 001"/>
+				<ParamChoice storage="3" name="TransportType" default="0" value="0" storeChoices="0"/>
+			</Params>
+			<Transport name="Transport">
+				<Params name="Params">
+					<ParamRange name="Position" default="0" value="601.59183673479628851">
+						<ValueRange name="minMax" min="0" max="7500"/>
+						<ValueRange name="startStop" min="0" max="7500"/>
+						<BehaviourDouble name="BehaviourDouble">
+							<PhaseSourceTimeline name="PhaseSourceTimeline" globalSpeedEnabled="1">
+								<Params name="Params">
+									<ParamRange storage="3" name="Beats" default="16" value="16"/>
+									<ParamRange storage="3" name="BPM" default="128" value="128"/>
+									<ParamRange storage="3" name="Speed" default="1" value="1"/>
+									<ParamChoice storage="3" name="Syncmode" default="0" value="0" storeChoices="0"/>
+									<ParamChoice storage="3" name="PlayDirection" default="1" value="1" storeChoices="0"/>
+									<ParamChoice storage="3" name="PlayMode" default="0" value="2" storeChoices="0"/>
+									<ParamChoice storage="3" name="PlayModeAway" default="0" value="0" storeChoices="0"/>
+									<Param storage="3" name="Finished" default="0" value="0"/>
+								</Params>
+								<ParamBasedDuration name="ParamBasedDuration"/>
+								<Beats_double name="Beats_double" mode="0" numDetectedBeats="-1" numManualBeats="16" detectedTempo="-1" manualTempo="128" detected="0"/>
+							</PhaseSourceTimeline>
+						</BehaviourDouble>
+					</ParamRange>
+				</Params>
+			</Transport>
+			<ClipView name="ClipView">
+				<FoldParams name="FoldParams"/>
+			</ClipView>
+			<AudioTrack name="AudioTrack">
+				<AudioEffectChain name="AudioEffectChain"/>
+				<PrimarySource>
+					<AudioFileSource FileName="C:\Program Files\Resolume Arena 6\media\AV\Synth 001.wav"/>
+				</PrimarySource>
+			</AudioTrack>
+		</Clip>
+		<Clip name="Clip" uniqueId="1541836880887" layerIndex="21" columnIndex="0">
+			<PreloadData>
+				<VideoFile value="E:\tt_interaction\tt_interaction_rplidar_position_10_mountains\resolume\data\yunmstm.mov"/>
+			</PreloadData>
+			<Params name="Params">
+				<Param storage="3" name="Name" default="yunmstm" value="yunmstm"/>
+				<ParamChoice storage="3" name="TransportType" default="0" value="0" storeChoices="0"/>
+			</Params>
+			<Transport name="Transport">
+				<Params name="Params">
+					<ParamRange name="Position" default="0" value="25862.744050086126663">
+						<ValueRange name="minMax" min="0" max="100708.33333333332848"/>
+						<ValueRange name="startStop" min="0" max="100708.33333333332848"/>
+						<BehaviourDouble name="BehaviourDouble">
+							<PhaseSourceTimeline name="PhaseSourceTimeline" globalSpeedEnabled="1">
+								<Params name="Params">
+									<ParamRange storage="3" name="Beats" default="256" value="256"/>
+									<ParamRange storage="3" name="BPM" default="152.5196524617294358" value="152.5196524617294358"/>
+									<ParamRange storage="3" name="Speed" default="1" value="1"/>
+									<ParamChoice storage="3" name="Syncmode" default="0" value="0" storeChoices="0"/>
+									<ParamChoice storage="3" name="PlayDirection" default="1" value="1" storeChoices="0"/>
+									<ParamChoice storage="3" name="PlayMode" default="0" value="0" storeChoices="0"/>
+									<ParamChoice storage="3" name="PlayModeAway" default="0" value="0" storeChoices="0"/>
+									<Param storage="3" name="Finished" default="0" value="0"/>
+								</Params>
+								<ParamBasedDuration name="ParamBasedDuration"/>
+								<Beats_double name="Beats_double" mode="0" numDetectedBeats="-1" numManualBeats="256" detectedTempo="-1" manualTempo="152.5196524617294358" detected="0"/>
+							</PhaseSourceTimeline>
+						</BehaviourDouble>
+					</ParamRange>
+				</Params>
+			</Transport>
+			<ClipView name="ClipView">
+				<FoldParams name="FoldParams"/>
+			</ClipView>
+			<VideoTrack name="VideoTrack" manualDuration="0">
+				<Params name="Params">
+					<ParamRange storage="3" name="Width" default="3840" value="3840"/>
+					<ParamRange storage="3" name="Height" default="1080" value="1080"/>
+					<Param storage="3" name="RScale" default="1" value="1"/>
+					<Param storage="3" name="GScale" default="1" value="1"/>
+					<Param storage="3" name="BScale" default="1" value="1"/>
+					<Param storage="3" name="AScale" default="1" value="1"/>
+				</Params>
+				<RenderPass name="RenderPassChain" type="RenderPassChain" uniqueId="RenderPassChain" baseType="RenderPassChain">
+					<RenderPass storage="0" name="Transform" type="TransformEffect" uniqueId="17122039101699797593" baseType="Effect" index="0">
+						<Params name="Params">
+							<ParamRange name="Position Y" default="0" value="101"/>
+							<ParamRange name="Scale" default="100" value="51.446945337620576311"/>
+						</Params>
+						<View name="View" bCanBeDisabled="0" bCanBeRemoved="0"/>
+					</RenderPass>
+				</RenderPass>
+				<ChoosableMixer name="Blend"/>
+				<PrimarySource>
+					<VideoSource name="VideoSource" width="3840" height="1080" type="VideoFormatReaderSource">
+						<RenderPass name="RenderPassChain" type="RenderPassChain" uniqueId="RenderPassChain" baseType="RenderPassChain"/>
+						<VideoFormatReaderSource fileName="E:\tt_interaction\tt_interaction_rplidar_position_10_mountains\resolume\data\yunmstm.mov" LoadingThread="TTM_THREADED"/>
 					</VideoSource>
 				</PrimarySource>
 			</VideoTrack>
 		</Clip>
 	</Deck>
-	<Deck name="Deck" uniqueId="1537589025026" numLayers="4" numColumns="8" closed="0" deckIndex="1"/>
-	<Deck name="Deck" uniqueId="1537589025027" numLayers="0" numColumns="0" closed="0" deckIndex="2"/>
+	<Deck name="Deck" uniqueId="1541836880689" numLayers="0" numColumns="0" closed="0" deckIndex="1"/>
+	<Deck name="Deck" uniqueId="1541836880690" numLayers="0" numColumns="0" closed="0" deckIndex="2"/>
 </Composition>
 
